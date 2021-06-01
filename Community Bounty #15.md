@@ -85,3 +85,8 @@ This first update just to try to break it down, reduce the chance that I blow up
 
 Well, if I did it all at once, I think I would have blown up the recording so I think just breaking it up is good for everyone. 
 
+So, the next episode, I think, will be about Antioch.
+
+So, see you in that video. 
+
+Thank you for joining me and enjoy!
