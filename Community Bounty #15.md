@@ -145,3 +145,55 @@ There are a few things that have happened that have independent benefits but the
 And then we are trying to get to Sumer as soon as possible.
 It’s a big, inconvenient departure from the focus that we had but we had to do it, and now Sumer is hopefully next within a short while.
 
+## Transcript
+
+Video 2 [Antioch Network](https://play.joystream.org/video/13)
+
+Ok, so what is the Antioch network? 
+
+Now, about a week ago or so…I think it’s two weeks ago now. The time flies. We were trying to make a small not very invasive upgrade to the Babylone network which had been humming along for about, well, I want to say, three months or so. 
+
+Mainly to tweak a little bit of tokenomics parameters.
+
+We wanted to increase the number of simultaneous proposals there could be. Just a few minor things like that to improve the effectiveness of the test net. 
+And it wasn’t expected to be a big deal but what happened was not that long after the upgrade happened, so just for context, for people that may not know, the blockchain system or variety that the Joystream platform is built on allows you to upgrade the rules of the chain itself in flight using a special kind of transaction. 
+
+And that’s great for lots of reasons that we’ll probably cover in the future. 
+
+And we tried to use this on-chain upgradability feature at this time, at that time, and that was supposed to be fine but what happened was in a matter of a few, I want to say 20 blocks or so after the upgrade, there was a split in the network which ended up partitioning the validators into two separate polls.
+One group thought that the new runtime was in play, and one group thought that the old runtime was in play. 
+That is obviously very undesirable. 
+
+The whole point of your consensus system is to have agreement upon what the history and, therefore, the state of your blockchain is. 
+So that’s obviously a serious problem. 
+And, you know, we’ve gone through a lot of effort trying to get to the bottom of what happened.
+Trying to figure out the root cause of live failures and distributed systems is notoriously difficult, in particular if you haven’t actually prepared yourself for trying to debug those sorts of failures to begin with which we hadn’t.
+And so, we’ve gone through lots of different iterations of or, I should say, possible hypothesis for what the cause could be.
+The best hypothesis that we have at the current time is that there is a specific bug in the version of substrate. 
+So, taking a step back here as well in case you don’t know, the joystick blockchain is built on the substrate blockchain framework which is the framework that the Polkadot blockchain is built on. 
+And, in general, the framework that’s used to build pair chains which are blockchains that connect to Polkadot which Joystream itself may or may not end up doing. 
+It’s a great framework because it means you don’t have to focus on peer-to-peer networking or consensus or any of these very low-level things similarly as if you were deploying on Ethereum, let’s say. 
+
+And it really allows you to focus on building exactly the business logic that’s specific to your blockchain. 
+So just mentioning where does this substrate thing come from. 
+So, we are using the substrate, we are using a specific version of substrate, it isn’t particularly new, and the best hypothesis we could really come up with, for which there is limited evidence I should say, was that there was a specific kind of bug in the version of substrate that we are relying on, and that’s the best candidate for what’s causing the failure. 
+So, what we’ve been working on for the past two weeks or so has been to obviously figure that out, and then to migrate to a newer version of substrate. 
+So, that’s what we have done.
+
+We used to be on version two release candidate four, now we are on 201. 
+And we are going to be launching a new chain, namely the Antioch network, that’s probably going to be in two or three days from now so that actually wrong on the slides because I just made them a few or a while back.
+And that would be based on a new version of substrate which has benefits of its own, I should say, but we are mainly doing it to hopefully resolve this problem.  
+Of course, we would then get the runtime that we were trying to get initially with these improvements of the parameters for the proposal system and so on, there has also been some other changes to the way the council work. 
+I think we expanded from…Actually I don’t remember now, to be honest. 
+There are so many things going on but it is a bigger council.
+The council period is not shorter.
+
+So there are a few things that have happened that have independent benefits but the main issue here in Antioch is really to get back to the core, use case that Babylon already had with these small improvements. 
+And then we are trying to get to Sumer as soon as possible. 
+So, that’s the story on Antioch. 
+It’s a big, you know, inconvenient departure from the focus that we had but we had to do it, and now Sumer is hopefully next within a short while. 
+
+So that’s it on Antioch. 
+Join me again for Sumer. 
+
+
