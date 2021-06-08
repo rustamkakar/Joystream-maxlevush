@@ -98,10 +98,15 @@ videoId, slideId, timestamp_start:
 ### 13, 1.005, 00:00 
 ![Joystream_Community_Update_1 005](https://user-images.githubusercontent.com/83000549/121135345-fc4c2480-c866-11eb-9f43-090c893da476.jpeg)
 
-**Summary:** About two weeks ago we were trying to make a small, not very invasive upgrade to the Babylone network, which had been humming along for about three months or so, mainly to tweak a little bit of tokenomics parameters. We wanted to increase the number of simultaneous proposals there could be - just a few minor things like that to improve the effectiveness of the testnet.
+**Summary:** What is the Antioch network?
 
 ### 13, 1.006, 00:08 
 ![Joystream_Community_Update_1 006](https://user-images.githubusercontent.com/83000549/121135832-79779980-c867-11eb-830a-1b3f65222ece.jpeg)
+
+**Summary:** About two weeks ago we were trying to make a small, not very invasive upgrade to the Babylone network, which had been humming along for about three months or so, mainly to tweak a little bit of tokenomics parameters. We wanted to increase the number of simultaneous proposals there could be - just a few minor things like that to improve the effectiveness of the testnet.
+
+### 13, 1.007, 00:47
+![Joystream_Community_Update_1 007](https://user-images.githubusercontent.com/83000549/121136213-fa369580-c867-11eb-8189-33e61faf878a.jpeg)
 
 **Summary:** Just for context, for people that may not know, the blockchain system or variety that the Joystream platform is built on allows you to upgrade the rules of the chain itself in flight using a special kind of transaction. 
 
@@ -110,10 +115,11 @@ And we tried to use this on-chain upgradability feature at that time, and that w
 That is obviously very undesirable. The whole point of your consensus system is to have agreement upon what the history and, therefore, the state of your blockchain is.
 
 And we’ve gone through a lot of effort trying to get to the bottom of what happened.
+
 Trying to figure out the root cause of live failures and distributed systems is notoriously difficult, in particular if you haven’t actually prepared yourself for trying to debug those sorts of failures to begin with which we hadn’t.
 
-### 13, 1.007, 00:47
-![Joystream_Community_Update_1 007](https://user-images.githubusercontent.com/83000549/121136213-fa369580-c867-11eb-8189-33e61faf878a.jpeg)
+### 13, 1.008, 02:27
+![Joystream_Community_Update_1 008](https://user-images.githubusercontent.com/83000549/121136761-9496d900-c868-11eb-9d7e-9a6b2e9f02ad.jpeg)
 
 **Summary:** We’ve gone through lots of different iterations of or possible hypothesis for what the cause could be. The best hypothesis that we have at the current time is that there is a specific bug in the version of substrate.
 
@@ -124,13 +130,14 @@ It’s a great framework because it means you don’t have to focus on peer-to-p
 We are using a specific version of substrate, it isn’t particularly new, and the best hypothesis we could really come up with, for which there is limited evidence, was that there was a specific kind of bug in the version of substrate that we are relying on, and that’s the best candidate for what’s causing the failure.
 What we’ve been working on for the past two weeks or so has been to figure that out and then to migrate to a newer version of substrate.
 
-### 13, 1.008, 02:27
-![Joystream_Community_Update_1 008](https://user-images.githubusercontent.com/83000549/121136761-9496d900-c868-11eb-9d7e-9a6b2e9f02ad.jpeg)
+### 13, 1.009, 03:53 
+![Joystream_Community_Update_1 009](https://user-images.githubusercontent.com/83000549/121137206-053df580-c869-11eb-84ff-45674518a4ed.jpeg)
 
 **Summary:** That’s what we have done. We used to be on version two release candidate four, now we are on 201. 
-We are going to be launching a new chain, namely the Antioch network in probably two or three days from now that would be based on a new version of substrate which has benefits of its own, but we are mainly doing it to hopefully resolve this problem.
+We are going to be launching a new chain, namely the Antioch network in probably two or three days from now that would be based on a new version of substrate which has benefits of its own, but we are mainly doing it to hopefully resolve this problem.  
 
 We would then get the runtime that we were trying to get initially with these improvements of the parameters for the proposal system.
+
 There have also been some other changes to the way the council work.  It is a bigger council. The council period is not shorter.
 
 There are a few things that have happened that have independent benefits but the main issue in Antioch is to get back to the core, use case that Babylon already had with these small improvements.
@@ -138,7 +145,3 @@ There are a few things that have happened that have independent benefits but the
 And then we are trying to get to Sumer as soon as possible.
 It’s a big, inconvenient departure from the focus that we had but we had to do it, and now Sumer is hopefully next within a short while.
 
-### 13, 1.009, 03:53 
-![Joystream_Community_Update_1 009](https://user-images.githubusercontent.com/83000549/121137206-053df580-c869-11eb-84ff-45674518a4ed.jpeg)
-
-**Summary:** 
