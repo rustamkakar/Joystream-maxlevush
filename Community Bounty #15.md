@@ -1316,3 +1316,162 @@ this, where you would buy it, and that would give you the right to certain, I be
 
 16:44	That's it, see you in the next video.
 
+## Video 7 [Community](https://play.joystream.org/video/18)
+
+### 18, 1.040, 00:00
+![Joystream_Community_Update_1 040](https://user-images.githubusercontent.com/83000549/121429131-273e9180-c9a9-11eb-8476-0980d4d57023.jpeg)
+
+**Summary:** This is the last section of the first update.
+
+Here we're going to talk about what we're doing on the community side.
+
+We have a few different things going on in the way we're building the Joystream community up until main net but I think the most important initiative by far is the founding members program.
+
+The point of the community program in the Joystream project is to build a DAO which is capable of operating the platform and evolving on its own autonomously based on the technology and the policies and the processes that we've established before main net.
+
+At main net the community will fully run this system, and that requires you to have a lot of people with a lot of different skills, interests, infrastructure, etc.
+
+The founding member program is about identifying the people who can play that role, motivating them to put in the effort to learn and develop their own ideas for what should happen after the main net launch.
+
+For that matter what we should be doing prior to launch in order to make the tools and the documentation as effective as possible and to then distribute to these community members the token which is required to exercise the governance that allows that evolution to happen.
+
+### 18, 1.041, 01:47
+![Joystream_Community_Update_1 041](https://user-images.githubusercontent.com/83000549/121429376-6f5db400-c9a9-11eb-9e98-f76fbef81dbc.jpeg)
+
+**Summary:** The founding member program is really the program for trying to find those specific people, identifying them, celebrating them, rewarding them and following their lead towards main net.
+
+So far, we've inducted five members, and that has largely been based on the contributions of these individuals in the past before the program began. Most of these are making an exceptional contribution to the development of the system on an ongoing basis.
+
+### 18, 1.042, 02:30
+![Joystream_Community_Update_1 042](https://user-images.githubusercontent.com/83000549/121429647-bba8f400-c9a9-11eb-9ddc-577095f28b62.jpeg)
+
+**Summary:** These are names that you will recognize for show once the main net launches but they are closely followed by a good number of people who are trying to make it through.
+
+The primary and possibly the only way for the broad community to get access to the Joy token is by becoming a founding member which means that you need to, first of all, not be US persons, unfortunately. Secondly, you need to contribute by submitting these summaries on a periodic basis of what you've done, who you'd refer to the platform which allows you to accumulate these scores.
+
+There are two components to the score.
+
+The direct score is basically a representation of your direct contribution - what you do in terms of technical, community, social, whatever it is you do to actually help grow the community and help us go in the right direction.
+
+And there's a referral score which is a way of measuring how effective you've been at drawing in other people who are themselves people with high scores.
+Then based on that you have a total score, and that total score counts towards becoming a founding member.
+
+The policy that we're applying is dynamic, it's evolving so you are going to have to look up the most recent summary of what has happened in one of these scoring periods to understand what's going on, what's being emphasized. You'd have to go to the website to see where you rank on the leaderboard.
+But I expect we will pretty soon see some new founding members.
+
+It's an interesting question how many we actually will need by main net, how many people does it take, what distribution of stake should be in order for them to be effective.
+
+This is something we will never get the answer to entirely, but also we'll calibrate our policy to aim towards what our best thinking is at any given time.
+There are different ways of earning these scores. One, as I mentioned, is by referring people. 
+
+### 18, 1.043, 05:07
+![Joystream_Community_Update_1 043](https://user-images.githubusercontent.com/83000549/121429927-0b87bb00-c9aa-11eb-8560-a8ba9e7efae6.jpeg)
+
+**Summary:** You can work on bounties which is another major way we see of people who are, perhaps, not able to make it into one of the roles that are on the network, there's a limited number or you may need to be quite technical in order to do quite a lot of them.
+
+The bounty program is a way for the community members to contribute in other ways.
+
+If you have ideas for bounties that you would want to do or that you think other people could do – everything from marketing, translating texts and tutorials making to troll videos - there's a lot that's going to be coming out, but if you have ideas for bounties, I'm sure you will get points for coming up with those and helping us broaden our portfolio of different bounties available.
+
+### 18, 1.044, 06:03 
+![Joystream_Community_Update_1 044](https://user-images.githubusercontent.com/83000549/121430159-573a6480-c9aa-11eb-88fa-9c63fa54e4b6.jpeg)
+
+**Summary:** Obviously, there are the roles in the system itself.
+
+Being a content creator means publishing content under a channel that you own.
+
+Being a curator, which means that you either own or operate channels or you are responsible for making sure that the content in the content directory is following rules and policies that apply at any given time.
+
+I think that's a little bit of work in progress what the details of that actually entail, but being a curator lead means that you manage that group just as I discussed in the prior video with working groups.
+
+I think validator role is one of those roles that a lot of people try to do because it's sort of a sedative, forget-it type of activity, and it's straightforward how to do it, that definitely will also grant you points.
+
+## Transcript
+
+Video 7 [Community](https://play.joystream.org/video/18)
+
+00:01	Okay, this is the last section of the first update.
+
+00:04	Very impressed that you made it this far.
+
+00:08	Here we're going to talk about what we're doing on the community side.
+
+00:11	We have a few different things going on in the way we're building the Joystream community up until main net but I think the most important initiative by far is the founding members program.
+
+00:27	I guess maybe for a bit of context - what is the point of the community program in the Joystream project, what we're trying to do here is we're trying to build a DAO which is capable of operating the platform and evolving on its own autonomously based on the technology and the policies and the processes that we've established before main net.
+
+00:51	The goal is really at main net you guys, the community, will fully run this system, and that requires you to have a lot of people with a lot of different skills, interests, 
+infrastructure, all sorts of things, and that's what we're trying to get to.
+
+01:11	The founding member program is about identifying the people who can play that role, motivating them to actually put in the effort to learn and develop their own ideas for what should happen after the main net launch.
+
+01:24	For that matter what we should be doing prior to launch in order to make the tools and the documentation, everything as effective as possible, and, of course, to then distribute to these community members the token which is required to actually exercise the governance that allows that evolution to happen.
+
+01:47	The founding member program is really the program for trying to find those specific people, identifying them, celebrating them, rewarding them and following their lead towards main net.
+
+02:01	So far, we've inducted five members, and that has largely been based on the contributions of these individuals in the past before the program began.
+
+02:14	Most of these are making an exceptional contribution to the development of the system on an ongoing basis.
+
+02:22	These are names that you will recognize for show once the main net launches but they are closely followed by a good number of people who are trying to make it through.
+
+02:37	The way the founding member program works or the way you become a founding member is, I should say that is the primary and possibly the only way for the broad community to get access to the Joy token, so that's really the way you get there, primarily it's by becoming a founding member which means that you need to, first of all, not be US persons, unfortunately, secondly, you need to contribute by submitting these summaries on a periodic basis of what you've done, who you'd refer to the platform which allows you to accumulate these scores.
+
+03:21	There are two components to the score. 
+
+03:21	The direct score is basically some sort of a representation of your direct contribution, what you do in terms of technical, community, social, whatever it is you do to actually help grow the community and help us go in the right direction.
+
+03:39	And there's a referral score which is basically a sort of a way of measuring how effective you've been at drawing in other people who are themselves people with high scores.
+
+03:53	Then based on that you have a total score, and that total score counts towards becoming a founding member.
+
+04:00	The policy that we're applying, it's dynamic, it's evolving so you are going to have to look up the most recent summary of what has happened in one of these scoring periods to understand what's going on, what's being emphasized, certainly your score, you'd have to go to the website to see where you rank on the leaderboard.
+
+04:22	But I expect we will pretty soon see some new founding members.
+
+04:27	It's an interesting question how many we actually will need by main net, how many people does it take, what distribution of stake should be in order for them to be effective.
+
+04:39	This is something, I think, we will, first of all, never get the answer to entirely but also we'll probably sort of calibrate our policy to aim towards what our best thinking is at
+any given time.
+
+04:54	So, that's how you get into the founding member program.
+
+04:58	There are different ways of earning these scores. 
+
+05:02	Obviously, as I mentioned, you could refer people, that's one way.
+
+05:05	You can work on bounties which is another major way we see of people who are perhaps not able to make it into one of the roles that are on the network, there's a limited number or you may need to be quite technical in order to do quite a lot of them.
+
+05:29	So, the bounty program is a way for the community members to contribute in other ways.
+
+05:37	Definitely if you have ideas for bounties that you would want to do or that you think other people could do – everything from marketing stuff, translating texts and tutorials making to troll videos - there's a lot of stuff that's going to be coming out but if you have ideas for bounties, I'm sure you will get points for coming up with those and helping us broaden our portfolio of different bounties available.
+
+06:02	So, that's the bounty program.
+
+06:03	Obviously, there are the roles in the system itself.
+
+06:08	Being a content creator so publishing content under a channel that you own.
+
+06:14	Being a curator, which basically means that you either own or operate channels or you are responsible for making sure that the content in the content directory is following all sorts of rules and policies that apply at any given time.
+
+06:28	I think that's a little bit of work in progress what the details of that actually entail, but being a curator lead means that you manage that group just as I discussed in the prior video with working groups.
+
+06:40	Being a validator, I think this is one of those roles where a lot of people try to do it because it's sort of a sedative, forget-it type of activity, and it's kind of straightforward how to do it, that definitely will also grant you points.
+
+06:55	But I think the way you should be thinking about this is probably the more unique and the more substantial your contributions are, the more points you're likely to earn.
+
+07:09	So, if you see that there are tons of other validators, that's probably not the best place for you to go if you're trying to distinguish yourself.
+
+07:16	Obviously, being on the council is one of the most important roles, it's one of those roles that requires you to understand more of the platform as a whole so it's a great opportunity to learn to develop relationships with other founding members and other non-founding members that are trying to get there.
+
+07:36	We have storage providers and the lead for that group.
+
+07:41	I think that's basically the main roles that are live on the Antioch network, I'm maybe forgetting something but I think that's right.
+
+07:52	So, those are the ways you can earn points for your, I should say for all these roles you will of course also earn test net tokens which have monetary value so not only are you getting points towards actually becoming a founding member, but you're also getting cash basically for whatever it costs you in terms of infrastructure and time and so on.
+
+08:16	So, it should be pretty attractive.
+
+08:19	That's, I think, a good concise summary of what we're doing on the community side.
+
+08:22	Thank you for watching this video and watch out for the next community update. Bye!
