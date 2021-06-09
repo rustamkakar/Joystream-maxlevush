@@ -196,4 +196,165 @@ It’s a big, you know, inconvenient departure from the focus that we had but we
 So that’s it on Antioch. 
 Join me again for Sumer. 
 
+## Video 3 [Sumer Network](https://play.joystream.org/video/14)
+
+### 14, 1.0010, 00:00
+![Joystream_Community_Update_1 010](https://user-images.githubusercontent.com/83000549/121414685-809ec480-c999-11eb-9e0e-46a399805691.jpeg)
+
+**Summary:** Welcome to this second installment of the first Joystream community update. This segment is about the Sumer network which is a network we’ve been working on for about three months now. It is going to be building on Antioch which either is going to be released or has just been released depending on when this video comes out!
+
+### 14, 1.0011, 00:27
+![Joystream_Community_Update_1 011](https://user-images.githubusercontent.com/83000549/121415044-e68b4c00-c999-11eb-94d0-3a70fb370ebb.jpeg)
+
+**Summary:** The goal in the Sumer network is to do three separate things.
+
+First of all, we want to introduce the next and final iteration of our on-chain content directory.
+
+Then we are going to introduce Atlas Studio which is new part of the Atlas product. 
+
+And then we are going to introduce a new working group which we are calling the operations working group. 
+
+### 14, 1.0012, 00:51
+![Joystream_Community_Update_1 012](https://user-images.githubusercontent.com/83000549/121415239-176b8100-c99a-11eb-9058-78000f6a9159.jpeg)
+
+**Summary:** The new content directory is an enhancement over the existing one and through pretty important ways.
+
+The first one is that it is radically simplified. The existing content directory that we had was actually very complex because we were trying to achieve the goal of having the community to be able to update what is in the content directory, like videos and channels, and playlists without having to do runtime upgrades.
+
+So, runtime upgrades, as I probably have mentioned in this community update, is a way in substrate chains can change the rules of the system. So, for example, at one point in time a video has a title, and then at some later point in time a video has a title and also  what language the content of the video is recorded in or what language the people in the video speak.
+
+That is a relatively small thing to change but you want to make it easier for the community to change stuff like that, and if changing every little thing like that requires a community update, it's going to be really hard for the community to iterate quickly on this part of the platform which really needs to be very flexible.
+
+If you wanted to introduce other things, not just videos, for example, eBooks or some other mild variation of what we already have, it would also be very inhibiting if you'd have to do a runtime upgrade because you have to dive into the rust code, you have to change it, you have to figure out how to take all the old stuff in your state and turn it into the new stuff through a migration step that runs inside of the consensus of your blockchain, you have to update all sorts of dependencies and libraries and infrastructure to reflect how the new system works, you have to test a lot in advance.
+
+If the change is significantly big, you should probably also do an integration test where you run through a simulated upgrade with some representative state in your system, you see how it works after the runtime upgrade, if your account still works, if your voting system still works. 
+
+So, it's a lot of work. And if you make a mistake, you can permanently destroy your chain. So, it’s risky, it's hard, and it requires a lot of care.
+
+This is a very long-winded way of explaining why we ended up having the old content directory that we had. The point of that content directory was that it was very abstract, almost to the extent that it was like a relational database where it allowed the community to define schemas and concepts on chain so that you didn't have to do runtime upgrades to define new things or change the way things were represented.
+
+The problem was that it was extremely complicated. It became really hard to both have work properly on chain, it became really hard for people to understand how it worked. It turned out that you couldn't actually get all the flexibility that you wanted.
+
+What we're going to do in this release is we're going to put the heart of what it means to be in the content directory on chain, and then we're going to make the metadata associated with all the different things on the chain, such as videos and channels. We're going to make sure that that's actually very easy to change. You don't need to change the low-level business logic of the chain itself in order to make smaller tweaks that I described, such as the fact that a video may have a language. So, you just lift it out of the chain. 
+
+We just decided that this is the way our content directory is supposed to work. That’s a pretty big decision, and that's what's landing in Sumer.
+
+### 14, 1.0013, 05:31
+![Joystream_Community_Update_1 013](https://user-images.githubusercontent.com/83000549/121415711-a37da880-c99a-11eb-817f-dc77e23811c9.jpeg)
+
+**Summary:** Let me go through this very quickly. 
+
+The video of myself which is not that useful is covering up a part of the diagram which is useful. What's supposed to be there is a square which shows the unchanged storage system.
+
+The on-chain content directory has in this representation memberships. Members own channels. Channels have within them stuff like videos, and playlists, and series. All those actually exist in the chain but they haven't been fully implemented, and they will not be implemented in the consumer product like in Atlas itself.
+
+It has the idea of curators and curator groups. These are people who are employed in the content working group to manage and make sure that everything in the content directory is going according to plan, and they can also own channels themselves on behalf of the platform to feature official platform content.
+
+Now the interesting part here is that on chain you have this sort of index of what videos exist, who owns them. You also have an index of what data exists, like the images, the cover photos, the actual video media files. There's like a map basically which holds a representation of who owns everything, how much space has member number X used out of all the space available to them to publish to their channel, and, of course, when the storage infrastructure is supposed to be replicating what part of the data. Right now, of course, that's fully replicated in the current storage system but that would be changed in a future version which I’m going to get to in one of the later videos. But that index also lives on chain in the data directory.
+
+The actual storage is on separate off-chain infrastructure and storage nodes that are also responsible for shipping the data to users. One of the things that actually are possible in this release is for things outside the content directory to also use data. For example, we are aiming to have your membership avatars stored in the same storage system.
+
+Before, for your avatar you really have to reference some URL somewhere. The first step of that in this Sumer release is that you could also store assets like that in the storage system itself, just like the videos for the content directory. Likewise, that could be used in other parts of the system, for example, as attachment in proposals or in forum posts.
+
+It’s going to be a general infrastructure piece for the rest of the runtime.
+
+That's the first part of what we're doing in Sumer on the content directory.
+
+### 14, 1.0014, 08:45
+![Joystream_Community_Update_1 014](https://user-images.githubusercontent.com/83000549/121416106-02dbb880-c99b-11eb-8116-0e50286e5d9c.jpeg)
+
+**Summary:** The next step is that we're launching Atlas Studio.
+
+Atlas is a viewer product where you can see videos and channels.
+
+And Atlas Studio is sort of the flip side of that experience where you can actually see all your channels, make channels, upload stuff to your channel, manage it, delete stuff - basically like the channel publisher owner experience.
+
+That really is a very big step in the direction of making it easier for people to publish content to the system which before or at the current time has to be done through a command line interface which is a very rough experience.
+
+### 14, 1.0015, 09:30
+![Joystream_Community_Update_1 015](https://user-images.githubusercontent.com/83000549/121416517-7978b600-c99b-11eb-9726-7ccd657dfd76.jpeg)
+
+**Summary:** I think I can show a few outtakes of what that experience looks like.
+
+You'll have  a nice experience for filling in the basic metadata and setting up your channel and editing it.
+
+### 14, 1.0016, 09:40
+![Joystream_Community_Update_1 016](https://user-images.githubusercontent.com/83000549/121416697-adec7200-c99b-11eb-9ba4-8e9c1cfb012f.jpeg)
+
+**Summary:** You will have a way to view all of your videos, and change and edit the metadata associated with them.
+
+You have drafts for stuff that you haven't committed to chain locally stored.
+
+This all runs in the browser, just as Atlas itself does.
+
+### 14, 1.0017, 09:56
+![Joystream_Community_Update_1 017](https://user-images.githubusercontent.com/83000549/121416840-d70d0280-c99b-11eb-8c54-73a74ed7c8e0.jpeg)
+
+**Summary:** There'll be a smooth upload flow for providing the media files and the basic metadata for videos in a step-by-step way which ends with you signing a transaction which, that's interesting, uses the Polkadot JS signer extension rather than the native wallet or local storage wallet that is in the normal Pioneer product that we're currently using.
+
+That's also step in the right direction of having people use an external key manager.
+
+### 14, 1.0018, 10:36
+![Joystream_Community_Update_1 018](https://user-images.githubusercontent.com/83000549/121417017-091e6480-c99c-11eb-8ba4-ed960e0c3c70.jpeg)
+
+**Summary:** As I mentioned, we can store assets now like images on the storage infrastructure, so that means we're going to be helping you set and provide the right assets, manage how they're going to be displayed as part of those upload flows.
+
+I think, it's going to be a very big improvement. 
+
+Atlas studio is the second major goal to launch for this release. 
+
+### 14, 1.0019, 11:01
+![Joystream_Community_Update_1 019](https://user-images.githubusercontent.com/83000549/121417193-33702200-c99c-11eb-9ae4-5f7a437c41d1.jpeg)
+
+**Summary:** If you have a look at the experience here for uploading and editing videos, you can see there's a tab system here, because we want to make it easier for people to manage multiple things at the same time.
+
+With that of course comes the need to manage a lot of different uploads at the same time as well, so there would be a separate area to manage all the different assets that are uploading at any given time. Uploads can fail, you could lose your connection, so we'll have a graceful way for you to retry anything that hasn't worked in the past. I don't think we could have had anything reasonable even in the CLI to make this possible.
+
+This is a very big step in the right direction, and it's a huge effort from a lot of people, designers and developers, and infrastructure pieces that are needed to get this to work.
+
+### 14, 1.0020, 11:59
+![Joystream_Community_Update_1 020](https://user-images.githubusercontent.com/83000549/121417379-6a463800-c99c-11eb-8137-0af981662bab.jpeg)
+
+**Summary:** Then the last piece of the puzzle is the Operations working group.
+
+I am going to get to what a working group is in a little bit more detail later. 
+
+If you're a little bit familiar with Joystream, you’ve probably noticed that there's the council and there are these groups that are responsible for specific things, and the operations working group is a new group like that, and what's special about it is that it's supposed to be for any kind of activity that doesn't have at least yet an on-chain footprint or a role.
+
+If you're a forum moderator, that implies that you can do certain things in the forum that other people can’t do. There's an on-chain forum in Joystream, as most people probably noticed. Likewise for the storage system. 
+
+The operations group is meant for all of those activities we're currently doing and which will be part of the system in the future which don't really have any direct privilege on chain.
+
+We just want to provide the basics of what a working group allows you to model - what the roles are so everyone can see, it's transparent how people got into the roles, how they applied, what were the merits for people being admitted. People have predictable reward schedules for what they will be paid, they have predictable stake at risk, so they can be given a little bit more responsibility in terms of what they can do, what they can be tasked with on behalf of the group and of the system overall.
+
+So, for example, we have at least one of the founding members, I believe, who is looking to be one of the first developers in the operations working group. In general, managers, marketers anyone who would like a role or a job but doesn't require you to do a lot on chain as VM.
+I’m hoping that this will be sort of a sandbox for discovering lots of roles that we haven't explicitly modeled into the system. Maybe we will as a result of what we find out but I think it's high time for something like this.
+
+### 14, 1.0021, 14:16
+![Joystream_Community_Update_1 021](https://user-images.githubusercontent.com/83000549/121417531-982b7c80-c99c-11eb-956d-ac9e1ac318e6.jpeg)
+
+**Summary:** Again, my little preview thing is covering part of the image. I can’t move it, so I’ll just try to explain. 
+
+The goal of this is just to show how the working group fits into the overall system of Joystream.
+
+There is some general information in this community update series so I'm sort of straddling the line between very general stuff and stuff very specific to the releases. I think in the future we'll do some deep dives where we try to go systematically through each one of these, and give you a more fine-grained and a thorough introduction.
+
+The governance system in Joystream is actually deeper than what you find in a lot of other crypto systems. In a lot of other crypto systems, you just have a flat coin voting, sort of voting pool which has proposals. Typically, they're actually limited to things like signaling and spending in upgrading the protocol. You don't even really have that rich of a portfolio of proposals to choose from.
+
+In Joystream that set of proposals are very broad. The root of trust for the whole system is a coin vote which happens not on individual proposals but on election cycles where you elect a council. A council is a one actor-one vote where you have council members vote on proposals. I think, the current setting we have for that is every two weeks there is a new council elected. That's mostly just informed by what's practical in order to have new people in the community, learn what's going on. It will be interesting to figure out what that number should be on main net but anyway there's a council which lives for a council period. The same, the members can stand for council, and they can be reelected for future councils.
+
+The main responsibility of the council is to vote on proposals, and the proposals do the things that I've just described, including hiring leads for individual working groups. There's one working group per subsystem. 
+
+There's a membership subsystem at least in the Olympia runtime, which I actually haven't mentioned, but that's the third community update, I think, so it’s coming. Prop is mostly preoccupied with invitations to grow the membership pool. You have the storage working group which is primarily about operating the storage system, storage infrastructure. You have the forum for operating and curating the communication on the forum. You have the operations working group that we are talking about here. It's these different subsystems that run some part of what the overall platform needs to work.
+
+Inside of each working group you basically have a leader which is someone who applies to occupy that role through a proposal to the council. That leader is basically responsible for spending money out of budget that is allocated to that group from the council for all sorts of things.
+For example, if you're a storage working group leader then you need to figure out how much money we need for the next month, and then you have to go to the council to have them give you that much for your budget.
+
+The leader is able to pay the rewards for himself and everyone else, all the other workers, as they're called, in the working group, for providing the service to the system. The leaders are also able to change what someone has as their reward and can slash them if they do something they're not supposed to do. The same applies to the leader with respect to the council. The council can update the reward, and slash them, and fire them. 
+
+So, the working group is sort of the lowest bureaucratic organ in the overall governance hierarchy of the Joystream system. And we're getting a new working group in Sumer.
+
+That hopefully was a useful introduction to working groups and the operations working group.
+
+
 
