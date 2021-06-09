@@ -356,5 +356,484 @@ So, the working group is sort of the lowest bureaucratic organ in the overall go
 
 That hopefully was a useful introduction to working groups and the operations working group.
 
+## Transcript
 
+Video 3 [Sumer Network](https://play.joystream.org/video/14)
+
+00:01	Hi and welcome to this second installment of the first Joystream community update.
+
+00:07	So, this segment is about the Sumer network which is a network we’ve been working on for about, I want to say, three months now.
+
+00:16	It is going to be building on Antioch which either is going to be released or has just been released depending on when this video comes out. 
+
+00:25	So, the goal in the Sumer network is to do three separate things. 
+
+00:32	First of all, we want to introduce the next and I want to say final iteration of our on-chain content directory.
+
+00:39	I am going to explain this in further detail but I am just going over the overview.
+
+00:43	Then we are going to introduce Atlas Studio which is new part of the Atlas product. 
+
+00:47	And then we are going to introduce a new working group which we are calling the operations working group. 
+
+00:51	So, let’s go through this. 
+
+00:53	So, the new content directory. 
+
+00:56	The new content directory is an enhancement over the existing one and through pretty important ways. 
+
+01:03	I am going to go though what the content directory actually is as in the next slide but just let’s dwell on this for a moment. 
+
+01:10	The first one is that it is radically simplified. 
+
+01:12	The existing content directory that we had was actually very very complex because we were trying to achieve the goal of having the community to be able to update what is in the content directory, so stuff like videos and channels, and playlists without having to do runtime upgrades. 
+
+01:35	So, runtime upgrades, as I probably have mentioned prior to this in this community update, is a way in substrate chains you can change the rules of the system. 
+
+01:46 	So, for example, you can imagine at one point in time a video has a title, and then at some later point in time maybe a video has a title and also what language the content of the video is recorded in or what language the people in the video speak or something like that. 
+
+02:08	So, that's a relatively small thing to change but you want to make it easier for the community to change stuff like that, and if changing every little thing like that requires a community update, it's going to be really hard for the community to iterate quickly on this part of the platform which really needs to be very flexible.
+
+02:25	If you wanted to introduce other things, not just videos, let's say you wanted to introduce like eBooks or, you know, some other mild variation of what we already have, it would also be very inhibiting if you'd have to do a runtime upgrade because we have to do a runtime upgrade, you have to dive into the rust code, you have to change it, you have to figure out how to take all the old stuff in your state and turn it into the new stuff through a migration step that runs inside of the consensus of your blockchain, you have to update all sorts of dependencies and libraries and infrastructure to reflect how the new system works, you have to test a lot in advance. 
+
+03:08	I mean, if you do it significantly, if the change is significantly big, you should probably also do a test, integration test where you run through a simulated upgrade with some representative state in your system, you see how it works after the runtime upgrade, does your account still work, does your voting system still work, and so on.
+
+03:29	So, it's a lot of work. 
+
+03:31	And if you make a mistake, you can permanently destroy your chain.
+
+03:36	So, it’s risky, it's hard, and it's, you know, requires a lot of care.
+
+03:44	So this is a very long-winded way of explaining why we ended up having the old content directory that we had. 
+
+03:53	And the point of that content directory was that it was sort of very abstract, almost to the extent that it was like a relational database where it allowed the community to define schemas and concepts on chain so that you didn't have to do runtime upgrades to define new things or change the way things were represented. 
+
+04:15	That's great. 
+
+04:16	The problem was that it was extremely complicated.
+
+04:19	It became really hard to both have work properly on chain, it became really hard for people to understand how it worked. 
+
+04:28	And really what it turned out to be was that you couldn't even get something that was all that flexible, so you couldn't actually get all the flexibility that you wanted. 
+
+04:37	So, what we did in this release is we just said screw it.
+
+04:41	What we're going to do is we're going to put the heart of what it means to be in the content directory on chain, and then we're going to make the metadata associated with all the different things on the chain, such as videos and channels, and so on.
+
+04:58	We're going to make sure that that's actually very easy to change. 
+
+05:02	So, you don't need to change the low-level business logic of the chain itself in order to make the sort of smaller tweaks that I described, such as the fact that a video may have a language.
+
+05:15	So, you sort of lift that out of the chain entirely. 
+
+05:18	We also just decided that this is the way our content directory is supposed to work. 
+
+05:23	So, that's a pretty big decision.
+
+05:25	And that's what's landing in Sumer. 
+
+05:30	So, let me go through now, just very quickly. 
+
+05:34	So, the video of myself which is not that useful is covering up a part of the diagram which is useful. 
+
+05:43	What's supposed to be there is a square which shows the unchanged storage system. 
+
+05:50	I’m going to figure out later whether I change that or not but let's just go with the flow.
+
+05:53	So, the on-chain content directory has in this representation, as you can see, memberships. 
+
+06:02	Members own channels.
+06:04	Channels have within them stuff like videos, and playlists, and series. 
+
+06:09	All those actually exist in the chain but they haven't been fully implemented, and they will not be implemented in the consumer product like in Atlas itself. 
+06:16	It has the idea of curators and curator groups.
+
+06:19	These are people who are sort of employed in the content working group to manage and make sure that everything in the content directory is going according to plan, and they can also own channels themselves on behalf of the platform to feature official platform content and that kind of stuff. 
+
+06:37	Now the interesting part here is that on chain you just have this sort of index of all these things, you know, what videos exist, who owns them and this sort of stuff.
+
+06:47	You also have an index of what data exists, so like the images, the cover photos, the actual video media files. 
+
+07:00	There's like a list of them you can think of or like a map basically which holds a representation of who owns everything, how much space has member number X used out of all the space available to them to publish to their channel and so on. 
+
+07:17	And, of course, when the storage infrastructure is supposed to be replicating what part of the data. 
+
+07:24	Right now, of course, that's fully replicated in the current storage system but that would be changed in a future version which I’m going to get to in one of the later videos. 
+
+07:35	But basically, that index also lives on chain in the data directory.
+
+07:41	And then of course the actual storage is on separate off-chain infrastructure and storage nodes that are also responsible for shipping the data to users. 
+07:48	And, as you can see, one of the things that actually are possible in this release is for things outside the content directory to also use data.  
+08:00	So, stuff like your membership avatars, we are aiming to have stored in the same storage system.
+
+08:09	So, before, you know, for your avatar you really have to reference some URL somewhere but for what we're going to be introducing, the first step of that in this Sumer release is that you could also store assets like that in the storage system itself just like the videos for the content directory. 
+
+08:28	Likewise, that could be used in other parts of the system, for example, as attachment in proposals or in forum posts and so on. 
+
+08:37	So, it’s going to be a general infrastructure piece for the rest of the runtime. 
+
+08:41	So, that's the first part of what we're doing in Sumer on the content directory. 
+
+08:46	The next step is that we're launching Atlas Studio. 
+
+08:50	So, Atlas is the sort of the viewer product where you can see videos and channels and so on. 
+
+08:57	And Atlas Studio is sort of the flip side of that experience where you can actually see all your channels, make channels, upload stuff to your channel, manage it, delete stuff - basically like the channel publisher owner experience. 
+
+09:13	That really is a very big step in the direction of making it easier for people to publish content to the system which before or at the current time has to be done through a command line interface which is a very rough experience. 
+
+09:28	I think I can show a few outtakes of what that experience looks like. 
+
+09:32	You'll have, you know, a nice experience for filling in the basic metadata and setting up your channel and editing it.
+
+09:40	You will have a way to view all of your videos, and change and edit the metadata associated with them. 
+
+09:48	You have drafts for stuff that you haven't committed to chain locally stored. 
+
+09:53	This all runs in the browser, just as Atlas itself does. 
+
+09:57	There'll be a smooth sort of upload flow for providing the media files and the basic metadata for videos in a step-by-step way which ends with you signing a transaction which, now actually that's interesting, uses the Polkadot JS signer extension rather than the native wallet or, I should say, local storage wallet that is in the normal Pioneer product that we're currently using. 
+
+10:30	So, that's also step in the right direction of having people use an external key manager. 
+
+10:37	So, there’s also, as I mentioned, we can store assets now like images on the storage infrastructure, so that means we're going to be helping you set and provide the right assets, manage how they're going to be displayed as part of those upload flows. 
+
+10:53	I think, it's going to be a very big improvement. 
+
+10:56	So, that's Atlas Studio which is the second major goal to launch for this release. 
+
+11:02	I also forgot, of course, we're going to be, if you have a look at the experience here for uploading and editing videos, you can see there's sort of like a tab system here, and that's because we want to make it easier for people to manage multiple things at the same time. 
+
+11:18	With that, of course, comes the need to manage a lot of different uploads at the same time as well, so there would be a separate area to manage all the different assets that are uploading at any given time. Uploads can fail, you could lose your connection and so on. 
+
+11:34	So, we'll have a graceful way for you to retry anything that hasn't worked in the past. 
+
+11:42	I don't think we could have had anything reasonable even in the CLI to make this possible. 
+
+11:47	This is a very big step in the right direction, and it's a huge effort from a lot of people, designers and developers and infrastructure pieces that are needed to get this to work. 
+
+11:58	That's fantastic.
+
+12:01	Then the last piece of the puzzle is the Operations working group.
+
+12:07	So, what is this?
+
+12:08	Well, I am going to get to what a working group is in a little bit more detail later but if you're a little bit familiar with Joystream, you’ve probably noticed that there's the council and then there are these groups that are responsible for specific things, and the operations working group is a new group like that, and what's special about it is that it's supposed to be for any kind of activity that doesn't have at least yet an on-chain footprint or a role.
+
+12:34	So, let's say if you're  a forum moderator, that implies that you can do certain things in the forum that other people can’t do. 
+
+12:44	There's an on-chain forum in Joystream, as most people probably noticed. 
+
+12:48	Likewise for the storage system and so on. 
+
+12:49	The operations group is meant for all of those activities we're currently doing and which will be part of the system in the future which don't really have any direct privilege on chain. 
+
+13:00	We just want to provide the basics of what a working group allows you to model - stuff like what the roles are so everyone can see, it's transparent how people got into the roles, how they applied, what were the merits for people being admitted. 
+
+13:17	People have predictive, they have predictable reward schedules for what they will be paid, they have predictable stake at risk, so they can be given a little bit more responsibility in terms of what they can do, what they can be tasked with on behalf of the group and of the system overall. 
+
+13:39	So, the examples we're going for at the moment are things like developers, we have at least one of the founding members, I believe, is looking to be one of the first developers in the operations working group. 
+
+13:51	In general, managers, marketers, anyone who would like you could think of almost like a role or a job but doesn't require you to do a lot on chain as VM. 
+
+14:00	So, that's the operations working group. 
+
+14:02	I’m hoping that this will be sort of a sandbox for discovering lots of roles that we haven't explicitly modeled into the system. 
+
+14:10	Maybe we will as a result of what we find out but I think it's high time for something like this.
+
+14:17	What is actually… again my little preview thing is covering part of the image. I'm not sure, if I can actually move it now. Can I do that? 
+
+14:30	No, I can’t. 
+
+14:30	All right. So, I'll just try to explain. The goal of this is just to show how the working group fits into the overall system of Joystream. 
+
+14:42	There is some general information in this community update series so I'm sort of straddling the line between very general stuff and stuff very specific to the releases.
+
+14:54	I think in the future we'll do some like deep dives where we try to go systematically through each one of these, and give you a more fine-grained and a thorough introduction.
+
+15:05	I just want to sort of tease you with that here. 
+
+15:08	The governance system in Joystream is actually a lot more, it is deeper, I would say, than what you find in a lot other crypto system.
+
+15:19	In a lot of other crypto systems, you just have a flat coin voting, sort of voting pool which has proposals.
+
+15:28	Typically, they're actually limited to things like signaling and spending maybe in upgrading the protocol.
+
+15:34	So, you don't even really have that rich of a portfolio of proposals to choose from.
+
+15:38	In Joystream that set of proposals are very very very broad.
+
+15:42	Of course, at the root, sort of the root of trust for the whole system is a coin vote which happens not on individual proposals but on election cycles where you elect a council. 
+
+15:55	A council is a sort of one actor-one vote where you have council members vote on proposals.
+
+16:05	I think the current setting we have for that is every two weeks there is a new council elected. 
+
+16:14	I’m not actually at all sure we are confident about what that number should be on main net but that's what we have at the current time.
+
+16:20	That's mostly just informed by what's practical in order to have new people in the community, learn what's going on.
+
+16:28	We'll see, that's interesting, it will be interesting to figure out what that ought to be but anyway there's a council which lives for a council period.
+
+16:36	The same, the members can stand for council, and they can be reelected for future councils.
+
+16:43	The main responsibility of the council is to vote on proposals, and the proposals do the things that I've just described, including hiring leads for individual working groups.
+
+16:55	There's one working group per subsystem you could think of it. 
+
+17:01	There's a membership subsystem which is primarily at least in the Olympia runtime, which I actually haven't mentioned,  but that's the third community update, I think, so it’s coming. 
+
+17:15	Prop is mostly preoccupied with invitations to grow the membership pool.
+
+17:21	You have the storage working group which is primarily about operating the storage system, storage infrastructure.
+
+17:27	You have the forum for operating and curating the communication on the forum.
+
+17:32	You have the operations working group that we are talking about here. 
+
+17:35	It's these different subsystems that run some part of what the overall platform needs to work.
+
+17:43	Inside of each working group you basically have a leader which is someone who applies to occupy that role through a proposal to the council.
+
+17:54	And that leader is basically responsible for spending money out of budget that is allocated to that group from the council for all sorts of things.
+
+18:02	So, you can imagine, for example, if you're a storage working group leader then you need to figure out, well, how much money do we need for the next let's say month, and then you have to go to the council to have them give you that much for your budget.
+
+18:20	The leader is able to pay the rewards for himself and everyone else, all the other workers, as they're called, in the working group, for providing the service to the system. 
+
+18:32	The leaders are also able to change what someone has as their reward and can slash them if they do something they're not supposed to do.
+
+18:42	And, of course, same applies to the leader with respect to the council.
+
+18:45	The council can update the reward and slash them and fire them and all this sort of stuff.
+
+18:50	So, the working group is sort of the lowest sort of bureaucratic organ in the overall governance hierarchy of the Joystream system.
+
+19:02	And we're getting a new working group in Sumer.
+
+19:05	That hopefully was a useful introduction to working groups and the operations working group.
+
+19:12	I think that's the last of it, so thank you for joining me for this Sumer update, see you in a bit. 
+
+# Video 3 [Olympia Network](https://play.joystream.org/video/15)
+
+### 15, 1.0022, 00:00
+![Joystream_Community_Update_1 022](https://user-images.githubusercontent.com/83000549/121420498-bc3c8d00-c99f-11eb-84f9-0c5afe01efc6.jpeg)
+
+**Summary:** Welcome to part three, glad you're still sticking with me.
+
+This is about the Olympia network. The Olympia network is a mega release we've been working on for a long time asynchronously with everything else and particularly on the runtime side, also on the Pioneer side, obviously, and I’m going to get to it.
+
+It's such a big release that it's not even scheduled to be the release immediately after the Sumer release.
+
+The reason I’m putting it on the table is because it's probably one of those big milestones which may or may not be the last release, even before main net probably going to have one or two big releases, even after that, but it's a very important piece milestone for where we're trying to go.
+
+It's also something that we were working on for such a long time that I thought it was worth sharing.
+
+### 15, 1.0023, 01:10
+![Joystream_Community_Update_1 023](https://user-images.githubusercontent.com/83000549/121420797-10e00800-c9a0-11eb-97a4-61522e4fcdca.jpeg)
+
+**Summary:** What's going on in this release?
+
+We are doing two things.
+
+One is that we're shipping a new updated simplified benchmarked and audited runtime which sees major improvements really across the board and new functionality and features for every subsystem.
+
+And then it's introduction of Pioneer 2.
+
+Pioneer, for those who don't know, is the governance app where you vote and stake and buy memberships and run for the elections in the council and forum, etc. That's all that has to do with participating in the system. Pioneer 2 is the sort of user facing application for doing that through a user interface.
+
+It's a tremendous piece of work in terms of on the infrastructure, the design, the application development itself. There are a lot of pieces that are coming together, and we really could have released the runtime improvements that we already have but it just doesn't make sense for us to try to upgrade the version of Pioneer which is currently live, that we're calling Pioneer one, and try to upgrade them to work with the new runtime.
+
+It's just going to be a lot of work for very temporary benefits, so our thinking is that we really will go live once Pioneer 2 is ready, and that will simultaneously reveal a system which is quite different in many ways from what we see today.
+
+The overall structure is the same but there will be important improvements everywhere.
+
+### 15, 1.0024, 02:53
+![Joystream_Community_Update_1 024](https://user-images.githubusercontent.com/83000549/121421042-54d30d00-c9a0-11eb-9f08-89fdde96d368.jpeg)
+
+**Summary:** I think the best way to get a flavor for what the Olympia runtime currently looks like, and remember it's a moving target whenever we develop something new that we're not ready to put out right away, it will sort of get go live in the Olympia runtime. We can put it in the context of what we currently expect will be in the main net runtime.
+
+You could see that on the runtime side we're really getting there.
+
+There are basically two major subsystems. Well, it is an open question whether the channel tokens and DAOs is a subsystem, but two big pieces that we haven't started on at all. Everything else is in some reasonable state of development. 
+
+In addition, we're working with SR Labs, one of the premier auditing firms that work with Polkadot and that old ecosystem, and they've already audited a substantial part of our Olympia runtime to help us identify problems. That's gone really well, and we're probably going to do another audit once we're at the finishing line. 
+
+We've already done a very meaningful step towards getting production ready, I think, and at the same time we've also done benchmarking, as I mentioned prior.
+What is benchmarking? This is one of the important or necessary steps involved in deriving the fees that will be used in your blockchain.
+
+If you're used to Ethereum, you will know that the fees associated with doing anything is computed on the fly because the whole system is a dynamic, and the set of contracts changes.
+
+In substrate there's sort of a step involved in the development process where you try to compute basically how expensive it is to do all the operations that people can do in the system - that's called benchmarking. That literally boils down to measuring how much time each action or transaction, if you will, takes on certain reference hardware. 
+
+We've done that for a big part of the system - we've built that in-house skill, and we will be doing that for all the modules that go into Olympia which means we will have meaningful transaction fees as well. I think at the current runtime basically every transaction has the same nominal fee which is sort of a random number that won't be the case in Olympia.
+
+There is an extra step from benchmarking to getting fees which is more about figuring out how much you're going to charge per unit of computation and per unit of block space, so to speak, in terms of your native token, but that's a smaller exercise.
+
+Let me try to just briefly talk about some of the things that have changed. It will be way too much to try to cover all this but one of the very important things we've changed is that, what's referred to as the referendum module here, which has to do with electing the council.
+
+You're now able to use stake that you're using for something else. Let's say you're a validator or you're staking as a working group lead or in a proposal or something, you're able to take that stake and redeploy it to vote or stand for the council.
+
+This was a big step in the right direction in terms of making it much cheaper for people to participate in governance. In the current system that's live you have to pick whether you want to participate in governance or you want to stake, and then it's really easy to get to the selfish thing of just thinking about your own private returns on your own T-Joy account and stake rather than thinking about managing the system overall. If everyone does that, it doesn't work out as well as we would like.
+
+That’s a very big change in the tokenotics of the system overall. That stake is reusable towards this one specific thing of being participating in elections.
+We are introducing the new content directory that I've talked about in Sumer.
+
+We're introducing the idea of a constitution which is a very simple idea. We're not, I think, the first chain to do this but it's sort of a social commitment to all the conventions and standards and improvement proposals, if you want to follow bitcoin or Ethereum parlance of things, that are on the social layer of the system.
+
+There are all sorts of metadata standards, for example, about how you encode an application for a working group. That would be in the constitution, and all sorts of policy things that the chain itself doesn't actually model and capture goes into the constitution.
+
+There's a council blog where the council can speak in one voice to the system. 
+
+We’re adding crowdfunded bounties which is a way for community members to fund the creation of all sorts of goods that can be useful for the platform where they don't depend on the council to contribute. If you want to improve some software or really anything, you can get people on the system to fund a bounty where someone is tasked with the responsibility of following up with the bounty, and distributing the funds according to what people contribute. 
+
+I think that’s sufficient for you to just get a flavor for some of the things that are changing.
+
+### 15, 1.0025, 09:09
+![Joystream_Community_Update_1 025](https://user-images.githubusercontent.com/83000549/121421573-e04c9e00-c9a0-11eb-873d-3d9b01eb3050.jpeg)
+
+
+**Summary:** Then we have Pioneer itself.
+
+Pioneer is the product where you actually engage in governance and participate in the community, so it's extremely important, given that this is a video platform DAO, and we have for a very long time been using and trying to maintain and evolve a fork of the Polkadot apps application.
+
+That has a lot of limitations and problems not least of which is that you really can only access information that's conveniently in the current state of the chain, and that really limits your ability to do all sorts of searches and queries and look back into history about who has done what at what time and what happened, which is a critical precondition for people to accumulate reputation and you being able to distinguish who's a bad guy or girl for various positions and roles.
+
+Pioneer 2 is really focused on this goal of conveniently lifting out all the historical information that exists in the system where you can understand what the history of a person is and also aggregating and summarizing a lot of the complicated state that is in the system into a more digestible form.
+
+A lot of what enables that is, on one hand, of course, a product that's been redesigned from scratch by a team of excellent designers but also this infrastructure piece called Hyper which I'm going to talk about in the next update which allows you to look through all of the transactions and all the events and all the state in one simple query and allows you to do really cool things like, for example, search for anywhere you're mentioned in the forum, or in a proposal or you could look at all the time someone was fired in one easy click.
+
+There are all sorts of ways of lifting out all the information which currently is either not possible to get out or your application has to go and talk to an archival node for five minutes before it could fetch and filter and query and search for whatever you're looking for. Pioneer 2 is really a big piece of making it practically possible for the DAO to actually work.
+
+That’s it - the changed runtime, Pioneer 2 – that’s what is coming up in Olympia.
+
+## Transcript
+
+Video 3 [Olympia Network](https://play.joystream.org/video/15)
+
+00:01	All right, welcome to part three, glad you're still sticking with me here.
+
+00:06	So, this is about the Olympia network.
+
+00:10	The Olympia network is sort of like a mega release we've been working on for a long time sort of asynchronously with everything else and particularly on the runtime side, also on the Pioneer side, obviously, and I’m going to get to it.
+
+0:21	And it's such a big release that it's not even scheduled to be the release immediately after the Sumer release.
+
+00:32	The reason I’m sort of putting it on the table is because it's probably one of those big milestones which may or may not be the last release, even before main net probably going to have one or two big releases, even after that, but it's a very important piece milestone for where we're trying to go.
+
+00:51	And it's also something that we were working on for such a long time that I thought it was worth sharing.
+
+00:58	So, what's going on in this release?
+
+01:02	We are doing two things.
+
+01:04	One is that we're shipping a new updated simplified benchmarked and audited runtime which sees major improvements really across the board and new functionality and features for, I would say, every subsystem.
+
+01:24	And then it's introduction of Pioneer 2, version 2.
+
+01:28	Pioneer, for those who don't know, is the governance app where you vote and stake and buy memberships and run for the elections in the council and forum and blah blah.
+
+01:36	So that's all the stuff that actually has to do with participating in the system.
+
+01:43	Pioneer 2 is the sort of user facing application for doing that through a user interface.
+
+01:51	And I want to say that really probably the big bottleneck for going live with Olympia is actually Pioneer itself.
+
+02:01	It's a tremendous piece of work in terms of on the infrastructure, the design, the application development itself.
+
+02:12	There are a lot of pieces that are coming together, and we really could have released
+the runtime improvements that we already have but it just doesn't make sense for us to try to upgrade the version of Pioneer which is currently live, that we're calling Pioneer one, and try to upgrade them to work with the new runtime.
+
+02:31	It's just going to be a lot of work for very temporary benefits, so our thinking is currently that we really will go live once Pioneer 2 is ready, and that will simultaneously reveal a system which is quite different in many ways from what we see today.
+
+02:50	The overall structure is, of course, the same but there will be, you know, important improvements everywhere. 
+
+02:55	So, I think the best way to get a flavor for what the Olympia runtime currently looks like, and remember it's a moving target whenever we develop something new that we're not ready to put out right away, it will sort of get go live in the Olympia runtime.
+
+03:15	And we can sort of put it in the context of what we currently expect will be in the main net runtime. 
+
+03:20	You could see that on the runtime side we're really getting there.
+
+03:23	There are basically two major subsystems, well, it is an open question whether the channel tokens and DAOs is a subsystem, but two big pieces that really we haven't started on at all. 
+
+03:40	Everything else is in some reasonable state of development, to put it that way. 
+
+03:45	In addition, again, my image is covering that, but we're working with SR Labs, one of the premier auditing firms that work with Polkadot and that old ecosystem, and they've already audited a substantial part of our Olympia runtime to help us identify problems, and that's gone really well, and we're probably going to do another audit once we're sort of at the finishing line.
+
+04:15 	But we've already done a very meaningful step towards getting production ready, I think, and at the same time we've also done benchmarking, as I mentioned prior.
+
+04:25	So, what is benchmarking?
+
+04:25	This is one of the important or necessary steps involved in deriving the fees that will be used in your blockchain.
+
+04:36	If you're used to Ethereum, you will know that the fees associated with doing anything is sort of computed on the fly because the whole system is a dynamic, and the set of contracts changes, and so on.
+
+04:50	In substrate there's sort of a step involved in the development process where you try to compute basically how expensive it is to do all the operations that people can do in the system - that's called benchmarking. 
+
+05:05	That literally boils down to sort of measuring how much time each action or transaction, if you will, takes on certain reference hardware. I am skipping ahead here. 
+
+05:16	And we've done that for a big part of the system - we've sort of built that in-house skill, and we will be doing that for all the modules that go into Olympia which means we will have meaningful transaction fees as well.
+
+05:31	I think at the current runtime basically every transaction has the same nominal fee which is sort of a random number that won't be the case in Olympia.
+
+05:40	There is an extra step from benchmarking to getting fees which is more about figuring out how much you're going to charge per unit of computation and per unit of block space, so to speak, in terms of your native token.
+
+05:57	But that's, you know, that's a smaller exercise.
+
+06:01	So, let me try to just briefly talk about some of the things that have changed.
+
+06:04	It will be way too much to try to cover all this but one of the very very important things we've changed is that, what's referred to as the referendum module here, which has to do with electing the council.
+
+06:15	You're now able to use stake that you're using for something else. Let's say you're a validator or let's say you're staking as a working group lead or in a proposal or something, you're able to take that stake and redeploy it to vote or stand for the council.
+
+06:34	This was, I think, a big step in the right direction in terms of making it much cheaper for people to participate in governance. In the current system that's live you really have to pick whether you want to participate in governance or you want to stake, and then it's really easy to get to basically do the, you know, the selfish thing of just thinking about your own private returns on your own T-Joy account and stake rather than thinking about, you know, managing the system overall.
+
+07:07	If everyone does that, it doesn't work out as well as we would like.
+
+07:10	That's a very big change in the tokenotics of the system overall.
+
+07:15	That stake is basically reusable towards this one specific thing of being participating in elections.
+
+07:23	We are introducing obviously the new content directory that I've talked about in Sumer. 
+
+07:28	We're introducing the idea of a constitution which is a very simple idea, actually. 
+
+07:32	We're not, I think, the first chain to do this but, basically, it's sort of a social commitment to all the conventions and standards and, you know, improvement proposals, if you want to follow sort of bitcoin or Ethereum parlance of things, that are sort of on the social layer of the system.
+
+07:53	There are all sorts of metadata standards, for example, about how you encode an application for a working group, for example, that would be in the constitution and all sorts of policy things that the chain itself doesn't actually model and capture goes into the constitution.
+
+08:09	There's a council blog where the council can sort of speak in one voice to the system.
+
+08:17	We’re adding crowdfunded bounties which is basically a way for community members to fund the creation of all sorts of goods that can be useful for the platform where they don't depend on the council to contribute. 
+
+08:33	So, if you want to improve some software or really anything, you can get people on the system to fund a bounty basically where someone is tasked with the responsibility of following up with the bounty, and distributing the funds according to what
+people contribute and so on.
+
+08:55	What else should I cover?
+
+08:57	I think maybe that’s sufficient for you to just get a flavor for some of the things that are changing.
+
+09:03	So, that's the Olympia runtime and some of the things that are being changed.
+
+09:09	Then we have Pioneer itself.
+
+09:12	Pioneer is the product where you actually engage in governance and participate in the community, so it's extremely important obviously given that this is a video platform DAO, and we have really for a very long time been using and trying to maintain and evolve a fork of the Polkadot apps application.
+
+09:35	You know, that has a lot of limitations and problems not least of which is that you really can only access information that's in the current state, conveniently in the current state of the chain, and that really limits your ability to do all sorts of searches and queries and look back into history about who has done what at what time and what happened and so on, which is a critical precondition really for people to accumulate reputation and you being able to distinguish, you know, who's a good guy, who's a bad guy or girl for various positions and roles and everything.
+
+10:17	Pioneer 2 is really focused on this this goal of conveniently lifting out all the historical information that exists in the system where you can understand what the history of a person is and also actually frankly sort of aggregating and summarizing a lot of the complicated state that is in the system into a more digestible form.
+
+10:41	And, well, a lot of what enables that is, on one hand, of course, a product that's been redesigned from scratch by a team of excellent designers but also this infrastructure piece called Hyper which I'm going to talk about in the next update which allows you to sort of look through all of the transactions and all the events and all the state in one simple query and allows you to do really cool things like, for example, search for anywhere you're mentioned in the forum, for example, or in a proposal or you could look at all the time someone was fired, for example, in one easy click.
+
+11:22	There are all sorts of ways of lifting out all the information which currently is sort of either not possible to get out or your application has to like go and talk to an archival node for you know five minutes or something before it could fetch and filter and query and search for whatever you're looking for.
+
+11:43	So, Pioneer 2 is really a big piece of making it practically possible for the DAO to actually work.
+
+11:52	So, that is it. 
+
+11:54	The changed runtime, Pioneer 2 – that’s what is coming up in Olympia.
+
+11:59	Thank you very much, see you soon for Hyper. 
 
