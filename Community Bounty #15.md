@@ -616,7 +616,7 @@ Video 3 [Sumer Network](https://play.joystream.org/video/14)
 
 19:12	I think that's the last of it, so thank you for joining me for this Sumer update, see you in a bit. 
 
-# Video 3 [Olympia Network](https://play.joystream.org/video/15)
+# Video 4 [Olympia Network](https://play.joystream.org/video/15)
 
 ### 15, 1.0022, 00:00
 ![Joystream_Community_Update_1 022](https://user-images.githubusercontent.com/83000549/121420498-bc3c8d00-c99f-11eb-84f9-0c5afe01efc6.jpeg)
@@ -703,7 +703,7 @@ That has a lot of limitations and problems not least of which is that you really
 
 Pioneer 2 is really focused on this goal of conveniently lifting out all the historical information that exists in the system where you can understand what the history of a person is and also aggregating and summarizing a lot of the complicated state that is in the system into a more digestible form.
 
-A lot of what enables that is, on one hand, of course, a product that's been redesigned from scratch by a team of excellent designers but also this infrastructure piece called Hyper which I'm going to talk about in the next update which allows you to look through all of the transactions and all the events and all the state in one simple query and allows you to do really cool things like, for example, search for anywhere you're mentioned in the forum, or in a proposal or you could look at all the time someone was fired in one easy click.
+A lot of what enables that is, on one hand, of course, a product that's been redesigned from scratch by a team of excellent designers but also this infrastructure piece called Hydra which I'm going to talk about in the next update which allows you to look through all of the transactions and all the events and all the state in one simple query and allows you to do really cool things like, for example, search for anywhere you're mentioned in the forum, or in a proposal or you could look at all the time someone was fired in one easy click.
 
 There are all sorts of ways of lifting out all the information which currently is either not possible to get out or your application has to go and talk to an archival node for five minutes before it could fetch and filter and query and search for whatever you're looking for. Pioneer 2 is really a big piece of making it practically possible for the DAO to actually work.
 
@@ -711,7 +711,7 @@ That’s it - the changed runtime, Pioneer 2 – that’s what is coming up in O
 
 ## Transcript
 
-Video 3 [Olympia Network](https://play.joystream.org/video/15)
+Video 4 [Olympia Network](https://play.joystream.org/video/15)
 
 00:01	All right, welcome to part three, glad you're still sticking with me here.
 
@@ -825,7 +825,7 @@ people contribute and so on.
 
 10:17	Pioneer 2 is really focused on this this goal of conveniently lifting out all the historical information that exists in the system where you can understand what the history of a person is and also actually frankly sort of aggregating and summarizing a lot of the complicated state that is in the system into a more digestible form.
 
-10:41	And, well, a lot of what enables that is, on one hand, of course, a product that's been redesigned from scratch by a team of excellent designers but also this infrastructure piece called Hyper which I'm going to talk about in the next update which allows you to sort of look through all of the transactions and all the events and all the state in one simple query and allows you to do really cool things like, for example, search for anywhere you're mentioned in the forum, for example, or in a proposal or you could look at all the time someone was fired, for example, in one easy click.
+10:41	And, well, a lot of what enables that is, on one hand, of course, a product that's been redesigned from scratch by a team of excellent designers but also this infrastructure piece called Hydra which I'm going to talk about in the next update which allows you to sort of look through all of the transactions and all the events and all the state in one simple query and allows you to do really cool things like, for example, search for anywhere you're mentioned in the forum, for example, or in a proposal or you could look at all the time someone was fired, for example, in one easy click.
 
 11:22	There are all sorts of ways of lifting out all the information which currently is sort of either not possible to get out or your application has to like go and talk to an archival node for you know five minutes or something before it could fetch and filter and query and search for whatever you're looking for.
 
@@ -835,5 +835,205 @@ people contribute and so on.
 
 11:54	The changed runtime, Pioneer 2 – that’s what is coming up in Olympia.
 
-11:59	Thank you very much, see you soon for Hyper. 
+11:59	Thank you very much, see you soon for Hydra. 
+
+## Video 5 [Hydra v3](https://play.joystream.org/video/16)
+
+### 16, 1.026, 00:00
+![Joystream_Community_Update_1 026](https://user-images.githubusercontent.com/83000549/121422846-33732080-c9a2-11eb-8880-4ff895f742e2.jpeg)
+
+**Summary** Thank you for joining me on this part four on Hydra v3.
+
+This is largely just going to be about what Hydra is but we are working towards v3 which is a major milestone for us in terms of the functionality that's needed, and we really think that with this release it's really becoming possible for people to build very powerful front-end applications for substrate chains using Hydra, so we're extremely excited about it.
+
+It's actually a pretty astounding achievement to be able to build and manage this on top of everything else we're doing because you will find many other projects that are very large teams entirely devoted to building something like Hydra. So, it's something we're really proud of, and we want to assist other people in adopting as well.
+
+The best way to understand Hydra is in terms of what problem it is solving.
+
+### 16, 1.027, 01:03
+![Joystream_Community_Update_1 027](https://user-images.githubusercontent.com/83000549/121423478-e6dc1500-c9a2-11eb-986c-f16dc8f749e0.jpeg)
+
+**Summary** Imagine a hypothetical blogging blockchain which is a substrate chain which has the single purpose of implementing some kind of a social blogging platform. In fact, a one well-known substrate project called Subsocial actually has implemented Hydra so it's not entirely hypothetical, but just for the sake of an argument imagine this kind of a blockchain.
+
+You have users submitting extrinsic or transactions where they make threads and posts, etc.
+
+### 16, 1.028, 01:50
+![Joystream_Community_Update_1 028](https://user-images.githubusercontent.com/83000549/121423703-2276df00-c9a3-11eb-937d-fa121918aecf.jpeg)
+
+**Summary** And then you can imagine building some sort of an application that's supposed to display something about this blogging infrastructure like allowing people to post, allowing people to read what's happening across different blogs and so on.
+
+The naive way you would do it, and the way most apps for substrate have been built is that you just build some front-end app, you hook it up to your substrate full node, and it queries it in order to ask some simple questions about what the structure of the blog is and who's doing what.
+
+### 16, 1.029, 02:30
+![Joystream_Community_Update_1 029](https://user-images.githubusercontent.com/83000549/121423877-4e926000-c9a3-11eb-85ba-65cb317272ba.jpeg)
+
+**Summary** The problem that you'll pretty quickly run into is that there are a lot of very simple queries that are needed in order to render the user experience that people are used to, certainly in Web 2.0 world that just are not possible if you ask a full node directly.
+
+If you ask for any of these examples and really any number of other examples you could think of as they are totally reasonable, the full node won't have a pre-prepared index over its history and state which would allow you to easily query and ask for those.
+
+Usually either you have a front-end app which takes a very long time to sync up because it downloads everything or a big part of either what's in the state or history in order to do processing on the client side in order to show the right thing for the user. That's slow, complicated, and, in general, just doesn't really scale.
+
+This is the problem that you'll run into writing any blockchain application, if you're going to make something that has a non-trivial user experience, you're going to have to somehow solve this problem. Specifically for substrate chains, Hydra is the framework approach we've taken to solve this.
+
+### 16, 1.030, 03:48
+![Joystream_Community_Update_1 030](https://user-images.githubusercontent.com/83000549/121424127-974a1900-c9a3-11eb-9d92-9f21242dc85f.jpeg)
+
+**Summary** What is Hydra? It's a software framework that makes it very easy for someone who's developing a substrate chain, such as Joystream, to focus only on the parts that are relevant to them. They get this whole set of tools and nodes that automatically does everything else they need in order to provide this API which can, for example, respond to the sort of queries that I showed you before.
+
+### 16, 1.031, 04:28
+![Joystream_Community_Update_1 031](https://user-images.githubusercontent.com/83000549/121425143-aaa9b400-c9a4-11eb-8735-53cf1ef6496d.jpeg)
+
+**Summary** We've been working on it for a while.
+
+We actually were really proud to see that the Kusama judges picked it as the first entrant winner in the open hack category, so that was really cool.
+
+### 16, 1.032, 04:57
+![Joystream_Community_Update_1 032](https://user-images.githubusercontent.com/83000549/121425409-f0ff1300-c9a4-11eb-97a0-32874646e40f.jpeg)
+
+**Summary** From the way I am describing it, you may feel that you've heard of this before, in particular coming from the Ethereum space, and this is basically because this is very similar to what the Graph tries to do for Ethereum. Basically, it tries to give that kind of a service for smart contracts whilst we do it for standalone chains.
+
+There are some big important differences between the Graph and the Hydra framework.
+
+One important difference is, at least before the way the Graph used to work was that the Graph company hosted a service where everyone who built an app that was talking to the Ethereum chain would talk to a server that the Graph company was running.
+
+They were not that happy with that, it's not really in the spirit of the Web 3 vision, so they always had the goal of building this distributed peer-to-peer type of network that would replace their role in provisioning that service. That's not an easy thing to do but that's something they've started to roll out, so I think over the next coming months or so there's going to be some version of what the hosted version of the Graph does for that is decentralized in some way.
+The way we run Hydra and generally people are expected to run Hydra is that the person who hosts the front-end application would pretty much run the query node instance. That's the way we're envisioning this being provisioned. Maybe we end up shipping a working group which has people running query nodes, this is what we call Hydra nodes basically, where people are incentivized by our DAO to run them for the benefit of people using either Atlas or Pioneer or any other major front-end application but this is one of those decisions that we are still quite early on in terms of how it's going to be provisioned at scale.
+
+### 16, 1.033, 07:08
+![Joystream_Community_Update_1 033](https://user-images.githubusercontent.com/83000549/121425558-1ee45780-c9a5-11eb-9661-6bfecd7b1f0a.jpeg)
+
+**Summary** How is it that this actually works for a developer?
+
+A developer has to define two things.
+
+The whole point of Hydra is to alleviate the burden of having to do everything - talking to the chain, and managing a database, and putting your events in there, and making an API. It's a lot of work to get that to happen every time for a new substrate chain.
+
+So, first, a developer has to define the way the data in their system is organized in a really nice simple sort of GraphQL like markup language. If we take the Subsocial example, you say that you have a blog, and you have posts, and blogs have authors, and posts are part of blogs. You define a very convenient way how the data is organized.
+
+Then you would define what are called mappings which are basically rules which say when I see this kind of an event or this kind of a transaction in the substrate chain, I'm going to put something in the database which will be queryable later - either put something or update something or delete something, basically, update the database that holds the information that the front-end apps are interested in.
+
+If you provide these two, you get everything else for free.
+
+### 16, 1.034, 08:29
+![Joystream_Community_Update_1 034](https://user-images.githubusercontent.com/83000549/121425843-708ce200-c9a5-11eb-8e0b-e0f7fc08f4b9.jpeg)
+
+**Summary** The way Hydra works in production is that your application talks to a GraphQL server which has the API, that's the API which will allow you to ask those pretty questions that I mentioned in the beginning of the of the slide deck, that talks to a specific database which holds the data that I just talked about which is managed, sorted by these mappings.
+
+Then there is a processor which is this long running process that runs these mappings whenever it sees that the underlying full node has produced some new blocks and some new events and some new transactions. This indexer database holds a long-standing index of everything that’s happened in your substrate full node. That is the basic architecture that makes a single Hydra node come together.
+
+You can think of the mappings as defining how the query database looks, and then you can think of the mappings as the logic that runs in the processor. It's quite a nice abstraction.
+
+We are extremely proud of having been able to have done that on a relatively small team.
+
+A lot of these abstractions have been identified by the Graph, and they've done an amazing job, but it certainly has not been easy to do this with a smaller project with a separate purpose.
+
+We're very happy about having developed this, and we hope more people will continue to adopt it.
+
+That's the story on Hydra of which v3 is the next major release.
+
+## Transcript
+
+Video 5 [Hydra v3](https://play.joystream.org/video/16)
+
+00:01	All right. So, thank you for joining me on this part four on Hydra v3. 
+
+00:07	Now this is largely just going to be about what Hydra is but we are working towards v3 which is a major milestone for us in terms of the functionality that's needed, and we really think that with this release it's really becoming possible for people to build very powerful applications, front-end applications for substrate chains using Hydra, so we're extremely excited about it.
+
+00:35	As I’ll get to, you know, it's actually a pretty astounding achievement to be able to build and manage this on top of everything else we're doing because you will find many other projects that are very large teams entirely devoted to building something like Hydra, so it's something we're really proud of, and we want to assist other people in adopting as well.
+
+00:55	So, Hydra. What is the, I guess, the best way to understand it is just in terms of what problem is it solving. 
+
+01:03	Imagine a hypothetical blogging blockchain which is sort of a substrate chain which has the single purpose of sort of implementing some kind of a social blogging platform, and, in fact, a one well-known substrate project called Subsocial which is covered under my little video in the top bottom right corner actually has implemented Hydra so it's not entirely hypothetical, but just for the sake of an argument imagine this kind of a blockchain.
+
+01:37	So, you have users submitting extrinsics or transactions where they make threads and posts, this sort of stuff.
+
+01:46	So, that's pretty, you know, simple.
+
+01:49	And then you can imagine building some sort of an application that's supposed to display something about this blogging infrastructure like allowing people to post stuff, allowing people to read what's happening across different blogs and so on. 
+
+02:06	So, the naive way you would do it and the way most apps for substrate have been built is that you just build some front-end app, you hook it up to your substrate full node, and it queries it in order to ask some simple questions about what the structure of the blog is and who's doing what and so on.
+
+02:27	The problem that you'll pretty quickly run into is that there are a bunch of very simple queries that are needed in order to render the sort of user experience that people are used to, certainly in Web 2.0 world that just are not possible if you ask a full node directly.
+
+02:45	If you ask for any of these examples and really any number of other examples you could think of as they are totally reasonable, the full node won't have a pre-prepared index over its history and state which would allow you to easily query and ask for those.
+
+03:05	The thing that you see people doing is either you have like a front-end app which takes a very long time to sync up because it downloads everything or a large chunk of either what's in the state or history in order to do a bunch of processing on the client side in order to show the right thing for the user.
+03:26	That's slow, complicated, in general just doesn't really scale.
+
+03:29	This is really the problem that you'll run into writing really any blockchain application, you will, if you're going to make something that's, I would say, has a non-trivial user experience, you're going to have to somehow solve this problem.  
+
+03:44	And specifically for substrate chains, Hydra is the framework approach we've taken to solve this.
+
+03:52	So, what it is? It's a software framework where it makes it very easy for someone who's developing a substrate chain, such as Joystream, to focus only on the parts that are relevant to them.
+
+04:06	They get this whole set of tools and nodes that automatically does everything else they need in order to provide this API basically which can, for example, respond to the sort of queries that I showed you before.
+
+04:22	So, that's the Hydra framework.
+
+04:26	We've been working on it for a while.
+
+04:29	We actually were really proud to see that the Hakusama judges picked it as the first entrant winner, so that was pretty cool in the, I believe it was the open category if I hadn't… I think that was, yeah, open hack, so that was really cool.
+
+04:46	For some of you, maybe the way I am describing it, you may feel like you've heard of this before, in particular coming from the Ethereum space, and this is basically because this is very very similar to what the Graph tries to do for Ethereum.
+
+05:01	Basically, it tries to give that kind of a service for smart contracts whilst we do it for standalone chains.
+05:12	There are some big important differences between the Graph and the Hydra framework.
+
+05:16	One important difference is, well, at least before the way the Graph used to work was that the Graph company sort of hosted a service where everyone who built an app that was talking to the Ethereum chain would sort of just talk to a server that the Graph company was running.
+
+05:37	They were sort of not that happy with that, it's not really sort of in the spirit of the Web 3 vision so they always had the goal of building this distributed peer-to-peer type of network that would replace their role in provisioning that service.
+
+05:57	That's not an easy thing to do but that's something they've started to roll out, so I think over the next coming months or so there's going to be some version of what the Graph, the hosted version of the Graph does for that is decentralized in some way.
+
+06:14	I mean I could get into the details of what that is but I think that would be a big distraction here.
+
+06:18	The way we run Hydra and generally people are expected to run Hydra is that the person who hosts the front-end application would pretty much run the query node instance.
+
+06:30	That's sort of the way we're envisioning this being provisioned.
+
+06:35	Maybe that we end up shipping a working group which has people running query nodes which, this is what we call Hydra nodes basically, where people are incentivized by our DAO to run them for the benefit of people using either Atlas or Pioneer or any other major front-end application but this is one of those decisions that we are still quite early on in terms of how it's going to be provisioned at scale.
+
+07:05	How is it that this actually works for a developer?
+
+07:08	What a developer has to do is they have to define two things.
+
+07:12	The whole point of Hydra is to alleviate the burden of having to do everything like talking to the chain, and managing a database, and putting your events in there, and making an API. 
+
+07:25	It's a lot of work to get that to happen every time for a new substrate chain.
+
+07:29	So, what a substrate developer has to do is, first, they have to just define the way the data in their system is organized in a really nice simple sort of GraphQL like markup language. 
+
+07:45	There you would say, for example, if we take the Subsocial example that you have, you know, a blog, and you have posts, and blogs have authors, and posts are part of blogs.
+
+07:56	You would sort of define a very convenient way, in a way that developers are very comfortable with, how the data is organized.
+
+08:03	And then you would define what are called mappings which are basically rules which say when I see this kind of an event or this kind of a transaction in the substrate chain, I'm going to put something in the database which then will be queryable later.
+
+08:17	Either put something or update something or delete something, basically, update the database that holds the information that the front-end apps are interested in.
+
+08:26	If you provide these two, you basically get everything else for free.
+
+08:30	So, the way Hydra sort of works in production is that your application talks to a GraphQL server which has the API, that's the API which will allow you to ask those pretty questions that I mentioned in the beginning of the slide deck here that talks to a specific database which holds the data that I just talked about which is managed, sorted by these mappings.
+
+08:58	Then there is a processor which is this long running process that runs these mappings whenever it sees that the underlying full node has produced some new blocks and some new events and some new transactions.
+
+09:13	Basically, this indexer database holds a sort of long-standing index of 
+all the stuff that's happened in your substrate full node. 
+
+09:25	That is the basic architecture that makes a single Hydra node sort of come together.
+
+09:31	You can basically think of the mappings as defining how the query database looks, and then you can think of the mappings as the logic that runs in the processor.
+
+09:42	It's quite a nice abstraction.
+
+09:44	We are extremely proud of having been able to have done that on a relatively small team.
+
+09:51	A lot of these abstractions have been identified by the Graph, and they've done an amazing job, but it certainly has not been easy to do this with a smaller project with a separate purpose.
+
+10:06	We're very happy about having developed this, and we hope more people will continue to adopt it.
+
+10:10	That's the story on Hydra of which v3 is the next major release.
+
+10:17	So, that's it, see you for the next video.
+
 
