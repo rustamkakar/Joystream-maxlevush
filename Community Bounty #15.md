@@ -2,6 +2,11 @@
 
  *by maxlevush id 2130*
 
+[Community Update #1](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript)
+
+
+
+
 ## Video 1 [Community Update #1](https://play.joystream.org/video/12)
 
 videoId, slideId, timestamp_start:
