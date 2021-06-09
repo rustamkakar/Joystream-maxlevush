@@ -1036,4 +1036,283 @@ all the stuff that's happened in your substrate full node.
 
 10:17	So, that's it, see you for the next video.
 
+## Video 6 [New Specifications](https://play.joystream.org/video/17)
+
+### 17, 1.035, 00:00
+![Joystream_Community_Update_1 035](https://user-images.githubusercontent.com/83000549/121426797-923a9900-c9a6-11eb-94ac-30cbca767340.jpeg)
+
+**Summary:** Hi, and welcome to part five of the Community Update.
+
+Here I'll be going through some new specifications: some of them are finished, others are in progress, others we haven't started on - just to give people a flavor for some of the things that are coming down the pipe.
+
+### 17, 1.036, 00:22
+![Joystream_Community_Update_1 036](https://user-images.githubusercontent.com/83000549/121427158-f3fb0300-c9a6-11eb-87d6-e7d91f0524de.jpeg)
+
+**Summary:** Let's start with the new storage distribution system that we have already started to implement.
+
+The current storage system is the simplest possible thing you could imagine. It has an on-chain index of what all the data that exists in the system is – the hashes, and the sizes of things, and who owns them, etc. There is a designated role as a storage provider that means that you're obligated to store all the data that is in the system. That's the first clue that really wouldn't work at scale. And you also have to distribute all the data that you are storing as a storage provider.
+
+I think we've largely gotten away with it because there hasn't been a ton of load in the system because the publishing and consumer side of things hasn't been the way we have prioritized our development roadmap. We're a DAO and governance-focused project so we've invested a large share of our resources in developing that first.
+
+In the last six months, maybe a little bit more than that, we’ve shifted our attention or, I should say, broadened our investment horizon to also cover our investment scope, to cover more on the content side which is also going to result in the storage system needing to handle a little bit more scale and a little bit more realistic policy space.
+
+What's coming up in the v2 version?
+
+There are a few highlights that are worth mentioning. 
+
+First of all, we're going to be separating the role of holding on to data and replicating internally in the infrastructure and distributing data to end users who are, for example, sitting in Atlas. 
+
+Those are two very different activities from an infrastructure point of view, from an economic point of view. One is about having very reliable infrastructure that doesn't explode or catch on fire, that is not so bandwidth sensitive. Then you have this distribution activity which is about very quickly getting a much smaller subset of data to potentially a large number of people simultaneously. That's, for example, a role where it's important where you're located and who you expect will be in touch with you, and the latency involved. Those have been separated to do distinct roles.
+
+Another big improvement is that not everyone has to either store everything, if they're a storage provider, or distribute everything, if they're distributor.  We don't have any erasure coding or other scheme that tries to get away with avoiding storing and full replicas to the degree of safety and redundancy that you want, that hasn't really been important to us. The first step has been to move away from everyone storing everything. Maybe we will incorporate that in the future but I'm not sure how important it is for the main net level of load that we're imagining.
+
+Another big difference is that not only members or, I should say, channels can store data in the storage system and have it distributed. The council working groups could store assets as well which is very important because there's going to be an increasing set of assets of all kinds - binaries and source code and documents of different kinds - that you want different parts of the system to be able to persist as different people are flowing through those roles. That's why we've introduced the capability of those different subsystems to have their own designated storage spaces.
+
+Also, we're taking much more seriously the need to be able to reclaim space or delete content. That's something that really hasn't worked in any sort of scale, even with Sumer.
+
+Lastly, we are allowing the distribution policy, how it is you allocate your bandwidth resources across space and time, to be much more flexible. For a given channel, for example, for a given piece of content there's going to be a predictable geographic bias in who will want to access it quickly. If you're some Spanish cooking show, overwhelmingly there are some parts of the world which are going to want to access that content, and you would want to be able to optimize for the location of the distribution infrastructure that services those, as opposed to something else like a Finish knitting show.
+
+This level of sophistication is more than enough for main net purposes.
+
+### 17, 1.037, 06:13
+![Joystream_Community_Update_1 037](https://user-images.githubusercontent.com/83000549/121427430-49cfab00-c9a7-11eb-951e-a33d0955f1b6.jpeg)
+
+**Summary:** Then we have the concept of gateways.
+
+The issue the gateways attempt to address is the fact that it's really important for the tokenomics of the system to work specifically in the sense that if you're a user coming in to view content, you're consuming obviously expensive infrastructure resources, like bandwidth and storage, but you're also enjoying the fact that someone has made a fixed investment of creating the content that you're also viewing.
+
+For the system to work overall there has to be a way to get the viewers to contribute some value back to the platform and everyone else. The obvious way to do that is just requiring all the viewers to have Joy token and create memberships and have to have a signer and an ex in their browser and find their way to some front-end application hosted somewhere, and they have to acquire Joy in some way in order to view the content.
+
+I think it goes without saying that would be a huge barrier to entry, and it would really restrict your ability to onboard people who don't even know anything about crypto, don't know how to or don't want to deal with how to acquire it, how to manage it, how to store it, how to spend it. It's still not a great experience if every time you have to watch something, a big signer thing popped up and asked you to sign off on spending some Joy. Even if you made something a little bit lumpier, like if you paid for x number of views or for some period of time, it's still a very steep onboarding experience.
+
+I think, one of the main things we have to unlock is a way for  a general audience to, in an economically sustainable way, enjoy and consume the content, and that's what gateways are supposed to do.
+
+Gateways are front-end operators who are free to monetize and own the relationship with the end user in whatever way they see fit. They can monetize through advertising, they can monetize through some in-app purchase in some app store, maybe on a smart TV - they're free to do that however they see fit.
+
+And specifically, this ability to support advertising which is pretty important in order to be able to reach scale within a timely manner, you definitely would need to allow that at least in the mix. And that certainly requires you to be able to own the relationship and own the front-end primarily to avoid abuse and other things that will happen if you don't do that properly.
+
+Gateways have a business model around delivering a front-end user experience owning the relationship with the end user, and take on the burden of acquiring Joy and burning it in order to actually give their registered users access to the infrastructure and to the content. They internalize all the small transaction costs of everyone trying to do that on their own. The gateways do that on their behalf, and they have long-standing relationships with infrastructure providers, with the leads and the gateway working group.
+
+You should think of them as a new role in order to make it much easier to acquire and retain users that are not eager to instantly jump on the on the Joy bandwagon to acquire in order to use the application.
+
+The gateways are really important. It is not clear, probably the work will be in parallel with the v2 storage system work, but it's probably not going to come out at least two or three networks into the future.
+
+### 17, 1.038, 10:45
+![Joystream_Community_Update_1 038](https://user-images.githubusercontent.com/83000549/121427683-974c1800-c9a7-11eb-9615-a469504d5753.jpeg)
+
+**Summary:** Then we get to channel tokens and DAOs.
+
+This is something I'm really excited about. 
+
+They are called social tokens. It's a way for creators and small communities to issue tokens that give you a claim on the value that's generated by a channel. 
+I suppose we could also type to videos but this specific specification has to do with channels and the revenues that channels generate, and it gives you governance rights and how that channel is managed to the extent that the channel token issuer is interested in doing that, and it really tries to formalize something that's been attempted a good number of times.
+
+For people who have been in the space for a while there was something called Tatiana coin which tried to do a simpler version of this where you would buy it, and that would give you the right to a certain number of songs. This was a musician smart media token.
+
+There was a Steemit initiative which was supposed to give you the ability to create a community or monetize your community by issuing a token tied to it. I'm not entirely sure how the tokenomics was supposed to work. I think it was perhaps a little bit more speculative where it wasn't clear where the value would come from but here the value is really supposed to come from the value generated by the channel itself.
+
+I’m not sure how we're going to explain this but the idea itself is something that's been around for a while. If you're a creator, you can issue one of these tokens for your channel that you could raise Joy in order to be able to fund various expenditures, and you could also trade the channel tokens.
+
+### 17, 1.039, 12:54
+![Joystream_Community_Update_1 039](https://user-images.githubusercontent.com/83000549/121428047-f873eb80-c9a7-11eb-9420-b7419520bdfe.jpeg)
+
+**Summary:** Lastly, we have crowdfunded bounties.
+
+This has actually been implemented already.
+
+This is an idea for solving the problem that sometimes community members would want to organize within themselves in order to produce some sort of public good that has a platform-wide benefit, or maybe even a benefit within some subsection of the community which it's not worth it or it's not clear that it's going to be feasible to get the council with all of its priorities to actually accept and to fund, or maybe even that there is some budget constraints for the council, so they couldn't even do it if they wanted to do it.
+
+The idea is to implement something called an insurance contract which is very similar to, I guess it was called tipping point at one point. I don't remember now; it was this huge startup which was trying to incentivize collective action by saying “I'm going to do something only if a sufficient number of other people or sufficient amount of money has been dedicated to do it”.
+
+To some extent you could think of the free state project in the United States as a similar type of initiative for political collective action, but basically, it's the same idea where you can make a bounty and you could say “this is going to fund x if y amount of funds is provided within a certain amount of time or at any time”, so it just runs forever.
+
+If the funds are secured, people can come and work on a bounty, and there's going to be a dedicated person for each bounty who's assigned to as adjudicating whether someone's contribution is good or bad or worthy and how the funds should be distributed.
+
+So, basically, a bounty system combined with a crowdfunding system.
+
+There's actually a little bit more sophistication in this because we're also trying to model something called the dominant assurance contract which tries to make it incentive compatible to contribute to one of these by allowing the bounty to be owned by an entrepreneur, who puts up a little bit of money, where, if all the people who contribute to the bounty, if they contribute to it and it fails, so it doesn't reach the goal, whatever the goal is for whatever purpose, they all get to split the little prize or it's called the cherry in the bounty that's provided by the entrepreneur.
+
+Let's say you want to make a smart TV app for Joystream, you could make one of these bounties where only you could work on it, so only you would get the raised funds. You put up, for example, two thousand dollars which will be released to the funders if an insufficient number of people end up contributing to reach whatever goal you need, and you need, for example, 120 000 in order to do this. That actually makes it now in the interest of people otherwise who would sit idle and not be able to contribute because they get to speculate on the outcome that it doesn't actually work.
+
+It's going to be some time until it's actually exposed in Pioneer so you can use it but on the runtime side this all has already been implemented.
+
+There are other things but I think these major four new specifications are the most interesting ones to cover at the moment.
+
+## Transcript
+
+Video 6 [New Specifications](https://play.joystream.org/video/17)
+
+00:01	Hi, and welcome to part five of the Community Update.
+
+00:06	Here I'll be going through some new specifications for features that are either, actually some of them are finished, others are in progress, others we haven't started on, just to give people a flavor for some of the things that are coming down the pipe.
+
+00:23	So, let's start with the new storage distribution system.
+
+00:26	This we have already started to implement.
+
+00:31	A quick sort of refresher for those who may not know.
+
+00:34	The current storage system is sort of the simplest possible thing you could imagine.
+
+00:37	It has an on-chain index of what all the data that exists in the system is – like the hashes, and the sizes of things, and who owns them and so on.
+
+00:48	There is a designated role as a storage provider that means that you're obligated to basically store all the data that is in the system.
+
+00:57	So, that's the first clue that really wouldn't work at scale.
+
+01:02	You also have to distribute all the data that you are storing as a storage provider.
+
+01:08	That's sort of the way the system works today.
+
+01:11	I think we've largely gotten away with it because there hasn't been a ton of load in the system because the publishing and consumer side of things hasn't been the way we have prioritized our development roadmap.
+
+01:25	We're a DAO and governance-focused project so we've invested a large share of our resources in developing that first.
+
+01:36	In the last six months we've, maybe a little bit more than that, we've sort of shifted our attention or, I should say, broadened our investment horizon to also cover our investment scope, to cover more on the content side which is also going to result in the storage system needing to handle a little bit more scale and a little bit more realistic policy space.
+
+02:01	It couldn't have come any sooner.
+
+02:04	What's coming up in the v2 version?
+
+02:06	There are a few highlights that are worth mentioning.
+
+02:11	First of all, we're going to be separating the role of holding on to data and replicating internally in the infrastructure and distributing data to end users who are, for example, sitting in Atlas. 
+
+02:25	Those are really two very different activities from an infrastructure point of view, from an economic point of view.
+
+02:31	One is about having very reliable infrastructure that doesn't explode or, you know, catch on fire or whatnot.
+
+02:38	It's not so bandwidth sensitive.
+
+02:40	Then you have this distribution activity which is about very quickly getting a much smaller subset of data to potentially a large number of people simultaneously.
+
+02:53	That's, for example, a role where it's important maybe where you're located and who you expect will be in touch with you, and the latency involved and so on.
+
+03:05	So, those have been separated to do distinct roles.
+
+03:08	Another big improvement is obviously that not everyone has to either store, if they're a storage provider, everything or distribute, if they're distributor, everything.
+
+03:19	It's sort of sharded so that some of the storage providers store, basically, it's partitioned into different families of storage providers.
+
+03:31	We don't have any erasure coding or other scheme that tries to get away with avoiding storing and full replicas to the degree of safety and redundancy that you want, that hasn't really been important to us.
+
+03:50	The first step has really just been to move away from everyone storing everything.
+
+03:56	Maybe we will incorporate that in the future.
+
+04:01	I think, SIA, for example has that Messiah but I'm not sure how important it is for the main net level of load that we're imagining.
+
+04:11	So, that's a very big difference.
+
+04:13	Another big difference is that not only members or, I should say, channels can store stuff in the storage system and have it distributed.
+
+04:21	The council working groups could store assets as well which is very important because there's going to be an increasing set of assets of all kinds, you know, binaries and source code and documents of different kinds that you want different parts of the system to be able to persist as different people are flowing through those roles.
+
+04:45	That's why we've introduced the capability of those different subsystems to have their own designated storage spaces, so to speak.
+
+04:53	Also, we're taking much more seriously the need to be able to reclaim space or basically delete content.
+
+05:00	That's something that really hasn't worked in any sort of scale even with Sumer.
+
+05:05	So, that's something we're also introducing.
+
+05:08	Lastly, we are allowing the distribution policy, basically how it is you allocate your bandwidth resources across space and time to be much more flexible because what you can imagine is that for a given channel, for example, for a given piece of content there's going to be a predictable geographic bias in who will want to access it quickly.
+
+05:37	If you're some Spanish cooking show, overwhelmingly there are some parts of the world which are going to want to access that content, and you would want to be able to optimize for the location of the distribution infrastructure that services those, as opposed to something else like a Finish knitting show.
+
+05:59	That's another very important distinction.
+
+06:05	This level of sophistication is more than enough for main net purposes.
+
+06:10	So, that's the v2 storage distribution system, and the work has already started.
+
+06:14	Then we have the concept of gateways.
+
+06:20	The issue the gateways attempt to address is the fact that it's really important for the tokenomics of the system to work specifically in the sense that if you're a user,
+
+a consumer coming in to view content, you're consuming obviously expensive infrastructure resources like bandwidth and storage and so on, but you're also, of course, enjoying the fact that someone has made a fixed investment of creating the content that you're also viewing.
+
+06:53	For the system to work overall there has to be a way to get the viewers to contribute some value back to the platform and everyone else.
+
+07:02	The obvious way to do that is just requiring all the viewers to have Joy token and create memberships and have to have a signer and an ex in their browser and find their way to some front-end application hosted somewhere, and they have to acquire Joy in some way in order to view the content. 
+
+07:25	I think it goes without saying that would be a huge barrier to entry, and it would really restrict your ability to onboard people who don't even know anything about crypto, don't know how to or don't want to deal with how to acquire it, how to manage it, how to store it, how to spend it.
+
+07:42	It's still not a great experience if every time you have to watch something, a big signer thing popped up and asked you to sign off on spending some Joy, that would not be a great experience.
+
+08:00	Even if you made something a little bit more lumpy, like if you paid for x number of views or for some period of time, it's still a very steep onboarding experience.
+
+08:20	I think, one of the main things we have to unlock is a way for just a general audience to, in an economically sustainable way, enjoy and consume the content, and that's what gateways are supposed to do.
+
+08:32	Gateways are basically front-end operators who are free to monetize and own the relationship with the end user in whatever way they see fit.
+
+08:43	If they monetize through advertising, that's fine, if they monetize through some sort of in-app purchase in some app store, maybe on a smart TV, I don't know, they're free to do that however they see fit.
+
+08:59	And, specifically, this ability to support advertising which, I think, is pretty important in order to be able to reach scale within a timely manner, I think you definitely would need to allow that at least in the mix, and that certainly requires you to be able to own the relationship and own the front-end primarily to avoid abuse and other things that will happen if you don't do that properly.
+
+09;27	What gateways do is they basically have a business model around delivering a front-end user experience owning the relationship with the end user, and what they do is they take on the burden of acquiring Joy and burning it in order to benefit, well, in order to actually give their registered users access to the infrastructure and to the content.
+
+09:50	They sort of internalize all the small transaction costs of everyone trying to do that on their own.
+
+09:55	The gateways do that on their behalf, and they have long-standing relationships with
+infrastructure providers, with the leads and the gateway working group and so on.
+
+10:06	You should think of them as a new role in order to make it much easier to acquire and retain users that are not eager to instantly jump on the on the Joy bandwagon to acquire in order to use the application.
+
+10:25	Those are gateways. 
+
+10:27	They're really important, and they're probably going to be developed, well, it's not clear, probably the work will be in somewhat in parallel with the v2 storage system work, but it's probably not going to come out at least two or three networks into the future.
+
+10:45	So, those are gateways.
+
+10:45	Then we get to channel tokens and DAOs.
+
+10:48	This is something I'm really excited about.
+
+10:51	This is sort of, I think now it's being called social tokens.
+
+10:56	Basically, it's a way for creators and small communities to issue tokens that give you a claim on the value that's generated by a channel.
+
+11:09	I suppose we could also type to videos but this specific specification has to do with channels and the revenues that channels generate, and it gives you governance rights and how that channel is managed to the extent that the channel token issuer is interested in doing that, and it really tries to formalize something that's been attempted a good number of times.
+
+11:31	For people who have been in the space for a while there was something called Tatiana coin which basically tried to do something like this, well I would say simpler version of
+this, where you would buy it, and that would give you the right to certain, I believe it was a certain number of songs or something.  
+
+11:48	This was a musician, I think, smart media tokens, perhaps a little bit closer to this.
+
+11:54	There was a Steemit initiative which was supposed to give you the ability to create a community or monetize your community by issuing a token tied to it, I'm not entirely sure how the tokenomics was supposed to work.
+
+12:05	I think it was perhaps a little bit more speculative where it wasn't clear where the value would come from but here the value is really supposed to come from the value generated by the channel itself.
+
+12:19	So, that’s channel tokens or we're calling them channel bowels, social tokens.
+
+12:24	I’m not sure how we're going to explain this but the idea itself is something that's sort of been around for a while, and of course if you're a creator, you can issue one of these tokens for your channel that you could raise Joy in order to be able to fund various expenditures, and you could obviously trade the channel tokens also.
+
+12:53	So, those are the channel tokens.
+
+12:56	And then, lastly, we have crowdfunded bounties. 
+
+12:58	This has actually been implemented already.
+
+13:03	So, this is an idea for solving the problem that sometimes community members would want to organize within themselves in order to produce some sort of public good that has a platform-wide benefit but, or maybe even a benefit within some subsection of the community, which it's not worth it or it's not clear that it's going to be feasible to get the council with all of its priorities to actually accept and to fund, or maybe even that there is some budget constraints for the council, so they couldn't even do it if they wanted to do it.
+
+13:38	The idea is to implement something called an insurance contract which is, basically, very similar to, I guess it was called tipping point at one point, and then was, I don't remember now, it was this huge startup which was trying to basically incentivize collective action by saying “I'm going to do something only if a sufficient number of other people or sufficient amount of money has been dedicated to do it”.
+
+14:08	To some extent you could think of the free state project in the United States as a similar type of initiative for political collective action, but basically it's the same idea where you can make a bounty and you could say - this is going to fund x if y amount of funds are provided within a certain amount of time or at any time, so it just runs forever.
+
+14:30	And then people, if the funds are secured, people can come and work on a bounty, and there's going to be a dedicated person for each bounty who's assigned to as adjudicating whether someone's contribution is good or bad or worthy and how the funds should be distributed.
+
+14:48	So, basically, a bounty system combined with a crowdfunding system.
+
+14:53	There's actually a little bit more sophistication in this because we're also trying to model something called the dominant assurance contract which tries to make it incentive compatible to contribute to one of these by allowing the bounty to be owned by an entrepreneur who puts up a little bit of money, where if all the people who contribute to the bounty, if they contribute to it and it fails, so it doesn't reach the goal of, whatever the goal is for whatever purpose, they all get to split the little prize or it's called the cherry in the bounty that's provided by the entrepreneur.
+
+15:39	If you are to make a concrete, let's say you want to make a smart TV app for Joystream, you could make one of these bounties where only you could work on it, so only you would get the raised funds, and you put up, let's say, two thousand dollars which will be released to the funders if an insufficient number of people end up contributing to reach whatever goal you need, let’s say you need you need 120 000 in order to do this. 
+
+16:13	That actually makes it now in the interest of people otherwise who would sit idle and not be able to contribute because they get to speculate on the outcome that it doesn't actually work.
+
+16:25	So, that is already implemented, it's going to be some time until it's actually exposed in Pioneer so you can use it but on the runtime side this all has already been implemented.
+
+16:35	There are other things but I think these major four new specifications are the most interesting ones to cover at the moment.
+
+16:44	That's it, see you in the next video.
 
