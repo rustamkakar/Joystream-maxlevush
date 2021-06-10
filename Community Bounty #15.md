@@ -61,56 +61,57 @@ So, it’s both for the benefit of the community and us, as an organization, to 
 
 Video 1 [Community Update #1](https://play.joystream.org/video/12)
 
-Hi everyone!
+00:01	Hi everyone!
 
-And welcome to this first installment of the Joystream community update video series.
+00:02	And welcome to this first installment of the Joystream community update video series.
 
-So, this is, as I said, the first installment of many to come 
-in an effort to try to share a little bit more effectively what it is we are working on, what is coming down the pipe, what’s happening in the community.
+00:08	So, this is, as I said, the first installment of many to come 
 
-Just to try to bring everyone up to speed on where we are going and the road to mainnet basically. 
+00:12	in an effort to try to share a little bit more effectively what it is we are working on, what is coming down the pipe, what’s happening in the community.
 
-So, in this first episode I’m going to be covering first of the three next immediate networks – Antioch, Sumer, and Olympia, in that order. 
+00:18	Just to try to bring everyone up to speed on where we are going and the road to main net basically. 
 
-Then I am going to be covering Hydra which is sort of an infrastructure piece which is part of making all these networks possible and really important for delivering the main products we are working on that are consumer-facing – Atlas and Pioneer. 
+00:25	So, in this first episode I’m going to be covering first of the three next immediate networks – Antioch, Sumer, and Olympia, in that order. 
 
-Then I am going to try to go through the community side – what are we doing, what is the point of the different initiatives, what is the status, and, of course, least but not last, well, last but not least, the different new specifications that we have prepared for new exciting improvements that are coming after Olympia.
+00:34	Then I am going to be covering Hydra which is sort of an infrastructure piece which is part of making all these networks possible and really important for delivering the main products we are working on that are consumer-facing – Atlas and Pioneer. 
 
-So, I guess I should say a little bit more about what the point is of these update series. 
+00:49	Then I am going to try to go through the community side – what are we doing, what is the point of the different initiatives, what is the status, and, of course, least but not last, well, last but not least, the different new specifications that we have prepared for new exciting improvements that are coming after Olympia. 
 
-If you have been following us for a while, if you are even inside of JS Genesis trying to build this out, I am sure you must have noticed that the technical and social complexity of what we are trying to deliver has escalated quite significantly in the last six months or so.
+01:12	So, I guess I should say a little bit more about what the point is of these update series. 
 
-And with any growing effort organization you are going to have a lot of difficulty trying to synchronize all that information effectively.
+01:19	If you have been following us for a while, if you are even inside of JS Genesis trying to build this out, I am sure you must have noticed that the technical and social complexity of what we are trying to deliver has escalated quite significantly in the last six months or so.
 
-So, the point of this video series is we’ll just try to open up the floodgates informationally speaking so that people are more up to date on our sort of finer time scale in terms of what we are doing because up until now we have been making these network releases and announcements that are themselves kind of quite brief on the details of what’s actually being delivered. 
+01:35	And with any growing effort organization you are going to have a lot of difficulty trying to synchronize all that information effectively.
 
-You are going to have to dig into a lot of documentation and try a lot of stuff in order to learn to understand. 
+01:44	So, the point of this video series is we’ll just try to open up the floodgates informationally speaking so that people are more up to date on our sort of finer time scale in terms of what we are doing because up until now we have been making these network releases and announcements that are themselves kind of quite brief on the details of what’s actually being delivered. 
 
-So, it is not the best format for conveying where we are and what we are doing and what the point is. 
+02:08	You are going to have to dig into a lot of documentation and try a lot of stuff in order to learn to understand. 
 
-So, hopefully, these video series will go somewhere towards getting people synchronized on what we are trying to do, and it is not just the scope of what we are trying to do but the number of people involved inside of JS Genesis specifically has grown significantly. 
+02:14	So, it is not the best format for conveying where we are and what we are doing and what the point is. 
 
-People are involved into sub teams, they are trying to deliver quite complex functionality but still isolated to some smaller part of the system. 
+02:18	So, hopefully, these video series will go somewhere towards getting people synchronized on what we are trying to do, and it is not just the scope of what we are trying to do but the number of people involved inside of JS Genesis specifically has grown significantly. 
 
-Then it is very easy to get lost and not see the sort of how everything fits together. 
+02:37	People are involved into sub teams, they are trying to deliver quite complex functionality but still isolated to some smaller part of the system. 
 
-So, it’s both for the benefit of the community and us, as an organization, to try to get up to speed and organized around what we are trying to deliver. 
+02:45	Then it is very easy to get lost and not see the sort of how everything fits together. 
 
-So that is the goal and, hopefully, it is informative.
+02:51	So, it’s both for the benefit of the community and us, as an organization, to try to get up to speed and organized around what we are trying to deliver. 
 
-Please, give me feedback on what you think I should cover, how the format can be improved, and I will definitely try to take that on board.
+03:01	So that is the goal and, hopefully, it is informative.
 
-So, this is going to be a six-part series. 
+03:04 	Please, give me feedback on what you think I should cover, how the format can be improved, and I will definitely try to take that on board. 
 
-This first update just to try to break it down, reduce the chance that I blow up one of these. 
+03:16	So, this is going to be a six-part series. 
 
-Well, if I did it all at once, I think I would have blown up the recording so I think just breaking it up is good for everyone. 
+03:20	This first update just to try to break it down, reduce the chance that I blow up one of these. 
 
-So, the next episode, I think, will be about Antioch.
+03:25	Well, if I did it all at once, I think I would have blown up the recording so I think just breaking it up is good for everyone. 
 
-So, see you in that video. 
+03:31	So, the next episode, I think, will be about Antioch.
 
-Thank you for joining me and enjoy!
+03:36	So, see you in that video. 
+
+03:38	Thank you for joining me and enjoy!
 
 ## Video 2 [Antioch Network](https://play.joystream.org/video/13)
 
@@ -170,52 +171,76 @@ It’s a big, inconvenient departure from the focus that we had but we had to do
 
 Video 2 [Antioch Network](https://play.joystream.org/video/13)
 
-Ok, so what is the Antioch network? 
+00:01	Ok, so what is the Antioch network? 
 
-Now, about a week ago or so…I think it’s two weeks ago now. The time flies. We were trying to make a small not very invasive upgrade to the Babylone network which had been humming along for about, well, I want to say, three months or so. 
+00:06	Now, about a week ago or so…I think it’s two weeks ago now. The time flies. We were trying to make a small not very invasive upgrade to the Babylone network which had been humming along for about, well, I want to say, three months or so. 
 
-Mainly to tweak a little bit of tokenomics parameters.
+00:26	Mainly to tweak a little bit of tokenomics parameters.
 
-We wanted to increase the number of simultaneous proposals there could be. Just a few minor things like that to improve the effectiveness of the test net. 
-And it wasn’t expected to be a big deal but what happened was not that long after the upgrade happened, so just for context, for people that may not know, the blockchain system or variety that the Joystream platform is built on allows you to upgrade the rules of the chain itself in flight using a special kind of transaction. 
+00:29	We wanted to increase the number of simultaneous proposals there could be. Just a few minor things like that to improve the effectiveness of the testnet. 
 
-And that’s great for lots of reasons that we’ll probably cover in the future. 
+00:38	And it wasn’t expected to be a big deal but what happened was not that long after the upgrade happened, so just for context, for people that may not know, the blockchain system or variety that the Joystream platform is built on allows you to upgrade the rules of the chain itself in flight using a special kind of transaction. 
 
-And we tried to use this on-chain upgradability feature at this time, at that time, and that was supposed to be fine but what happened was in a matter of a few, I want to say 20 blocks or so after the upgrade, there was a split in the network which ended up partitioning the validators into two separate polls.
-One group thought that the new runtime was in play, and one group thought that the old runtime was in play. 
-That is obviously very undesirable. 
+01:07	And that’s great for lots of reasons that we’ll probably cover in the future. 
 
-The whole point of your consensus system is to have agreement upon what the history and, therefore, the state of your blockchain is. 
-So that’s obviously a serious problem. 
-And, you know, we’ve gone through a lot of effort trying to get to the bottom of what happened.
-Trying to figure out the root cause of live failures and distributed systems is notoriously difficult, in particular if you haven’t actually prepared yourself for trying to debug those sorts of failures to begin with which we hadn’t.
-And so, we’ve gone through lots of different iterations of or, I should say, possible hypothesis for what the cause could be.
-The best hypothesis that we have at the current time is that there is a specific bug in the version of substrate. 
-So, taking a step back here as well in case you don’t know, the joystick blockchain is built on the substrate blockchain framework which is the framework that the Polkadot blockchain is built on. 
-And, in general, the framework that’s used to build pair chains which are blockchains that connect to Polkadot which Joystream itself may or may not end up doing. 
-It’s a great framework because it means you don’t have to focus on peer-to-peer networking or consensus or any of these very low-level things similarly as if you were deploying on Ethereum, let’s say. 
+01:12	And we tried to use this on-chain upgradability feature at this time, at that time, and that was supposed to be fine but what happened was in a matter of a few, I want to say 20 blocks or so after the upgrade, there was a split in the network which ended up partitioning the validators into two separate polls.
 
-And it really allows you to focus on building exactly the business logic that’s specific to your blockchain. 
-So just mentioning where does this substrate thing come from. 
-So, we are using the substrate, we are using a specific version of substrate, it isn’t particularly new, and the best hypothesis we could really come up with, for which there is limited evidence I should say, was that there was a specific kind of bug in the version of substrate that we are relying on, and that’s the best candidate for what’s causing the failure. 
-So, what we’ve been working on for the past two weeks or so has been to obviously figure that out, and then to migrate to a newer version of substrate. 
-So, that’s what we have done.
+01:34	One group thought that the new runtime was in play, and one group thought that the old runtime was in play. 
 
-We used to be on version two release candidate four, now we are on 201. 
-And we are going to be launching a new chain, namely the Antioch network, that’s probably going to be in two or three days from now so that actually wrong on the slides because I just made them a few or a while back.
-And that would be based on a new version of substrate which has benefits of its own, I should say, but we are mainly doing it to hopefully resolve this problem.  
-Of course, we would then get the runtime that we were trying to get initially with these improvements of the parameters for the proposal system and so on, there has also been some other changes to the way the council work. 
-I think we expanded from…Actually I don’t remember now, to be honest. 
-There are so many things going on but it is a bigger council.
-The council period is not shorter.
+01:39	That is obviously very undesirable. 
 
-So there are a few things that have happened that have independent benefits but the main issue here in Antioch is really to get back to the core, use case that Babylon already had with these small improvements. 
-And then we are trying to get to Sumer as soon as possible. 
-So, that’s the story on Antioch. 
-It’s a big, you know, inconvenient departure from the focus that we had but we had to do it, and now Sumer is hopefully next within a short while. 
+01:42	The whole point of your consensus system is to have agreement upon what the history and, therefore, the state of your blockchain is. 
 
-So that’s it on Antioch. 
-Join me again for Sumer. 
+01:50	So that’s obviously a serious problem. 
+
+01:53	And, you know, we’ve gone through a lot of effort trying to get to the bottom of what happened.
+
+02:00	Trying to figure out the root cause of live failures and distributed systems is notoriously difficult, in particular if you haven’t actually prepared yourself for trying to debug those sorts of failures to begin with which we hadn’t.
+
+02:15	And so, we’ve gone through lots of different iterations of or, I should say, possible hypothesis for what the cause could be.
+
+02:28	The best hypothesis that we have at the current time is that there is a specific bug in the version of substrate. 
+
+02:35	So, taking a step back here as well in case you don’t know, the joystick blockchain is built on the substrate blockchain framework which is the framework that the Polkadot blockchain is built on. 
+
+02:48	And, in general, the framework that’s used to build pair chains which are blockchains that connect to Polkadot which Joystream itself may or may not end up doing. 
+
+02:55	It’s a great framework because it means you don’t have to focus on peer-to-peer networking or consensus or any of these very low-level things similarly as if you were deploying on Ethereum, let’s say. 
+
+03:09	And it really allows you to focus on building exactly the business logic that’s specific to your blockchain. 
+
+03:14	So just mentioning where does this substrate thing come from. 
+
+03:20	So, we are using the substrate, we are using a specific version of substrate, it isn’t particularly new, and the best hypothesis we could really come up with, for which there is limited evidence I should say, was that there was a specific kind of bug in the version of substrate that we are relying on, and that’s the best candidate for what’s causing the failure. 
+
+03:43	So, what we’ve been working on for the past two weeks or so has been to obviously figure that out, and then to migrate to a newer version of substrate. 
+03:54	So, that’s what we have done.
+
+03:56	We used to be on version two release candidate four, now we are on 201. 
+
+04:02	And we are going to be launching a new chain, namely the Antioch network, that’s probably going to be in two or three days from now so that actually wrong on the slides because I just made them a few or a while back.
+
+04:15	And that would be based on a new version of substrate which has benefits of its own, I should say, but we are mainly doing it to hopefully resolve this problem.  
+
+04:28	Of course, we would then get the runtime that we were trying to get initially with these improvements of the parameters for the proposal system and so on, there has also been some other changes to the way the council work. 
+
+04:42	I think we expanded from…Actually I don’t remember now, to be honest. 
+
+04:47	There are so many things going on but it is a bigger council.
+
+04:50	The council period is not shorter.
+
+04:53	So there are a few things that have happened that have independent benefits but the main issue here in Antioch is really to get back to the core, use case that Babylon already had with these small improvements. 
+
+05:07	And then we are trying to get to Sumer as soon as possible. 
+
+05:09	So, that’s the story on Antioch. 
+
+05:11	It’s a big, you know, inconvenient departure from the focus that we had but we had to do it, and now Sumer is hopefully next within a short while.
+
+05:24	So that’s it on Antioch. 
+
+05:25	Join me again for Sumer. 
 
 ## Video 3 [Sumer Network](https://play.joystream.org/video/14)
 
