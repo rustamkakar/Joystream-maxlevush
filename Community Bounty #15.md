@@ -3,25 +3,25 @@
  *by maxlevush id 2130*
 
 - [Community Update #1](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#video-1-community-update-1)
-   - [transript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript)
+   - [transcript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript)
 
 - [Antioch Network](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#video-2-antioch-network)
-   - [transript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-1)
+   - [transcript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-1)
 
 - [Sumer Network](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#video-3-sumer-network)
-   - [transript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-2)
+   - [transcript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-2)
 
 - [Olympia Network](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#video-4-olympia-network)
-   - [transript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-3)
+   - [transcript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-3)
 
 - [Hydra v3](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#video-5-hydra-v3)
-   - [transript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-4)
+   - [transcript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-4)
 
 - [New Specifications](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#video-6-new-specifications)
-   - [transript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-5)
+   - [transcript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-5)
 
 - [Community](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#video-7-community)
-   - [transript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-6)
+   - [transcript](https://github.com/maxlevush/Joystream-maxlevush/blob/main/Community%20Bounty%20%2315.md#transcript-6)
 
 ## Video 1 [Community Update #1](https://play.joystream.org/video/12)
 
