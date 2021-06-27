@@ -1,5 +1,7 @@
 As part of the recent KPIs (https://blog.joystream.org/sumer-kpis/#10.7) the council is required to come up with conditions under which a lead can be fired and/or slashed.
 
+Pre-proposal thread: https://testnet.joystream.org/#/forum/threads/460 
+
 ## WARN/SLASH/FIRE rules
 
 1. The warning is given in free form by council secretary (or/and deputy secretary) in the Discord council and operations/content-curator/storage-provider channels.
@@ -14,5 +16,9 @@ As part of the recent KPIs (https://blog.joystream.org/sumer-kpis/#10.7) the cou
 
 ## Indulgence for new Leads
 
-*rules for a probationary period* 
-- 
+*rules for a probationary period*
+
+- During the probationary period, the council gives a little more flexibility so that they can deal with what is required before considering serious action.
+- After upgrades or high workloads, you should probably expect some reports and things to be delayed, if the presenter provides a reasonable explanation and is even sociable, then some element of leniency should be provided.
+
+*Verevied by council secretary @tomato*
