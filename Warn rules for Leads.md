@@ -4,14 +4,13 @@ Pre-proposal thread: https://testnet.joystream.org/#/forum/threads/460
 
 ## WARN/SLASH/FIRE rules
 
-1. The warning is given in free form by council secretary (or/and deputy secretary) in the Discord council and operations/content-curator/storage-provider channels.
-2. The warning is given after approved text proposal.
+1. The warning is given after approved text proposal. The warning can be issued by anyone
 
-- If the Lead goes AFK with no prior explanation for 3 days he can be warned.
+- If the Lead goes AFK with no prior explanation for 4 days he can be warned.
 - If the Lead isn't responsive for further 2 days after approved warn-proposal, council could slash 25% of funds. 
 - If the Lead isn't responsive for a further 1 day after approved slash-proposal, then council could fire them.
-- If the Lead fails to produce a report they should be warned.
-- If the Lead fail to produce two reports in a row they can be fired.
+- If the Lead fails to produce 2 (two) reports they should be warned.
+- If the Lead fail to produce 3 (three) reports in a row they can be fired.
 - Any malicious/fraudulent activity = firing + slashing
 
 ## Indulgence for new Leads
