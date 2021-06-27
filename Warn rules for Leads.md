@@ -20,6 +20,6 @@ Pre-proposal thread: https://testnet.joystream.org/#/forum/threads/460
 - During the probationary period, the council gives a little more flexibility so that they can deal with what is required before considering serious action.
 - After upgrades or high workloads, you should probably expect some reports and things to be delayed, if the presenter provides a reasonable explanation and is even sociable, then some element of leniency should be provided.
 
-When proposals are made for warning, slashing or firing a lead, they should include relevant information and links to communicate what the issue is clearly.
+### When proposals are made for warning, slashing or firing a lead, they should include relevant information and links to communicate what the issue is clearly.
 
 If anyone has doubts when choosing the type of proposal, feel free to ask the secretary of the council or deputy
