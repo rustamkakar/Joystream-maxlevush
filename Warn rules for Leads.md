@@ -1,4 +1,4 @@
-As part of the recent KPIs (https://blog.joystream.org/sumer-kpis/#10.7) the council is required to come up with conditions under which a lead can be fired and/or slashed.
+As part of the recent KPIs (https://blog.joystream.org/sumer-kpis/#10.7, https://blog.joystream.org/sumer-kpis/#10.8, https://blog.joystream.org/sumer-kpis/#10.9) the council is required to come up with conditions under which a lead can be fired and/or slashed.
 
 Pre-proposal thread: https://testnet.joystream.org/#/forum/threads/460 
 
