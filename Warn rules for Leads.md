@@ -13,11 +13,9 @@ Pre-proposal thread: https://testnet.joystream.org/#/forum/threads/460
 - If the Lead fail to produce 3 (three) reports in a row they can be fired.
 - Any malicious/fraudulent activity = firing + slashing
 
-## Indulgence for new Leads
+## Allowances for New Leads, Upgrades and high workloads
 
 *rules for a probationary period*
 
 - During the probationary period, the council gives a little more flexibility so that they can deal with what is required before considering serious action.
 - After upgrades or high workloads, you should probably expect some reports and things to be delayed, if the presenter provides a reasonable explanation and is even sociable, then some element of leniency should be provided.
-
-*Verevied by council secretary @tomato*
