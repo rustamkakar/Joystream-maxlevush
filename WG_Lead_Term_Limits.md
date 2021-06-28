@@ -23,5 +23,8 @@ Guide -  for the newly hired lead to guide them on how to manage the position fo
 
 ### Re-elections
 
-One person cannot be in a role for more than 1 month in a row. You can be re-elected for a new term only after the position has been taken by another user for a month. 
+In the event the lead is still in mid-process of implementing something important, they can create a text proposal with a description of what they're working on to allow for a one-time 2 week extension to their term
 
+after 1 month, an opening will be made for new applicants for the lead position > once the review period starts, a proposal can be created to fire the lead with the reason "1 month term limit" if any user wants to > the council can at this point decide whether to fire the previous lead and hire a new lead, or to keep the previous lead in place
+
+The community can create proposals with reasoning, and the council can decide how they want to vote on them
