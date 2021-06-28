@@ -4,7 +4,7 @@
 
 *Pre-proposal Discussion https://testnet.joystream.org/#/forum/threads/372*
 
-### For current Leads the term limit (starting from when a proposal is approved) is 1 month.
+### For current Leads the term limit (starting from when this proposal is approved) is 1 month.
 
 After this period has ended the lead could stay on as: 
 - a worker
@@ -14,7 +14,7 @@ Guide -  for the newly hired lead to guide them on how to manage the position fo
 
 ### The retired lead reward
 
-- full rate payment for guide a new lead for 1 week
+- full rate payment for a period of 1 week, to help the new lead transition into the role
 - spending proposal to give the retired lead a reward (if lead will successfully complete the training period of a new lead)
 
 *The criteria for understanding the success of the training will be presented and discussed on the forum first*
@@ -23,5 +23,5 @@ Guide -  for the newly hired lead to guide them on how to manage the position fo
 
 ### Re-elections
 
-One person cannot be in a role for more than 1 month in a row. You can be re-elected for a new term only after 1 month of ??vacation??. 
+One person cannot be in a role for more than 1 month in a row. You can be re-elected for a new term only after the position has been taken by another user for a month. 
 
