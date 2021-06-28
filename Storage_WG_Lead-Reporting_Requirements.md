@@ -12,4 +12,4 @@
 - Periodic upload tests
 - Free space of each one of the storage workers
 
-It may be easier for the lead to require the storage providers to install some form of system monitoring solution, and then they can also report free space.
+If Lead missed the report - he can be warn/fire/slash https://testnet.joystream.org/#/proposals/197
