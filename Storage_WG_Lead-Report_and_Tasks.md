@@ -24,4 +24,4 @@ If Lead missed the report - he can be warn/fire/slash https://testnet.joystream.
 
 - Storage Lead should create a PR on Joystream/community-repo repository. 
 - Create text proposal for approve by the council
-- Once, when proposal approved and PR merged - put messedge on the forum inclede links on PR and proposal
+- Once, when proposal approved and PR merged - put messedge on the forum include links on PR and proposal
