@@ -17,11 +17,13 @@
 - The Lead must adjust the workers rewards if required due to rate changes.
 - The Lead should fire and/or slash non-performing workers.
 - Lead (and/or other SPs) must be available and helpful in Discord and the forum.
+- Identify storage providers that have low download speed or other issues, and warn the providers.
+- 
 
 If Lead missed the report - he can be warn/fire/slash https://testnet.joystream.org/#/proposals/197
 
-### How to submit report
+### How to submit a report
 
 - Storage Lead should create a PR on Joystream/community-repo repository. 
 - Create text proposal for approve by the council
-- Once, when proposal approved and PR merged - put messedge on the forum include links on PR and proposal
+- Once the proposal is approved and PR merged - put a message on the forum, including links to the PR and proposal
