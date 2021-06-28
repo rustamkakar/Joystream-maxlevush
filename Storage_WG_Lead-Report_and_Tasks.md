@@ -1,4 +1,4 @@
-# Storage WG Lead - Reporting Requirements
+# Storage WG Lead - Tasks + Reporting Requirements
 
 *Pre-proposal Discussion https://testnet.joystream.org/#/forum/threads/370, https://testnet.joystream.org/#/forum/threads/461*
 
@@ -11,6 +11,12 @@
 - Bandwidth use on each provider
 - Periodic upload tests
 - Free space of each one of the storage workers
+
+### Additional tasks
+
+- The Lead must adjust the workers rewards if required due to rate changes.
+- The Lead should fire and/or slash non-performing workers.
+- Lead (and/or other SPs) must be available and helpful in Discord and the forum.
 
 If Lead missed the report - he can be warn/fire/slash https://testnet.joystream.org/#/proposals/197
 
