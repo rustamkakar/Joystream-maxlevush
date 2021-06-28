@@ -20,7 +20,7 @@
 
 If Lead missed the report - he can be warn/fire/slash https://testnet.joystream.org/#/proposals/197
 
-### How tu submit report
+### How to submit report
 
 - Storage Lead should create a PR on Joystream/community-repo repository. 
 - Create text proposal for approve by the council
