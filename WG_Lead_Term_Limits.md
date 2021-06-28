@@ -7,7 +7,8 @@
 ### For current Leads the term limit (starting from when this proposal is approved) is 1 month.
 
 After this period has ended the lead could stay on as: 
-- a worker
+- a re-hire lead 
+- worker
 - a guide
 
 Guide -  for the newly hired lead to guide them on how to manage the position for a week. 
