@@ -13,3 +13,5 @@
 - Free space of each one of the storage workers
 
 If Lead missed the report - he can be warn/fire/slash https://testnet.joystream.org/#/proposals/197
+
+Storage Lead should create a PR on Joystream/community-repo repository. And then create text proposal dor approve by the council
