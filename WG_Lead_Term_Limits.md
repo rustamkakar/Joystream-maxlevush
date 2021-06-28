@@ -17,7 +17,7 @@ Guide -  for the newly hired lead to guide them on how to manage the position fo
 - full rate payment for a period of 1 week, to help the new lead transition into the role
 - spending proposal to give the retired lead a reward (if lead will successfully complete the training period of a new lead)
 
-*The criteria for understanding the success of the training will be presented and discussed on the forum first*
+*The exact criteria for the transition period between the old and new lead will be discussed on the forum first and issued as a text proposal for approval by the council*
 
 *You can only become a guide if you have successfully completed the term with all requested reports. The number of reports will be approved via proposal*
 
