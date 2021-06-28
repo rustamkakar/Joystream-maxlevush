@@ -14,7 +14,7 @@ Guide -  for the newly hired lead to guide them on how to manage the position fo
 
 ### The retired lead reward
 
-- full rate payment for guide a new lead
+- full rate payment for guide a new lead for 1 week
 - spending proposal to give the retired lead a reward (if lead will successfully complete the training period of a new lead)
 
 *The criteria for understanding the success of the training will be presented and discussed on the forum first*
@@ -25,4 +25,3 @@ Guide -  for the newly hired lead to guide them on how to manage the position fo
 
 One person cannot be in a role for more than 1 month in a row. You can be re-elected for a new term only after 1 month of ??vacation??. 
 
-Lead who was fired is not eligible for a new term
