@@ -35,7 +35,7 @@ if Lead misses the weekly report, he can be [WARN/SLASH/FIRE](https://github.com
 - To check the details of the current Content Working Group Mint:
   - use the following chain state query to determine the current mint ID: `contentDirectoryWorkingGroup -> mint`
   - check the details of the mint using the following query: `minting -> mints.`
-  - create a ``SetWorkingGroupMintCapacity proposal`` to refill WG mint
+  - create a ``SetWorkingGroupMintCapacity`` proposal to refill WG mint
 
 ## Content Curator WG Lead Term Limits
 For Leads the soft term limit is 1 month.
