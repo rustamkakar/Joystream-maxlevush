@@ -1,3 +1,6 @@
+This is a DRAFT. In next term council member should decide to add/remove bonuses. And discuss/add reasonable balance of rewards
+Then this file will be updated. 
+
 *Pre-proposal discussion https://testnet.joystream.org/#/forum/threads/447*
 
 *Based on KPIs https://blog.joystream.org/sumer-kpis/#11.8*
