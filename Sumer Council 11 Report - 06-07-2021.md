@@ -96,31 +96,31 @@ Failed Proposals
 ### 2.2 - Proposal Breakdown
 
 #### Proposal 204 - WG Lead Term Limits
-- Proposal Link: https://testnet.joystream.org/#/proposals/203
+- Proposal Link: https://testnet.joystream.org/#/proposals/204
 - Proposal Type: Text
 	- Amount: N/A
 - Status: Passed to next council
-	- Time to finalize: N/A
+	- Time to finalize: 9570 blocks (15,95h)
 - Created by: @maxlevush
 - Participants: @tomato, @nexusfallout, @fierydev, @l1dev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
 
 #### Proposal 205 - Storage Lead - Tasks + Reporting
-- Proposal Link: https://testnet.joystream.org/#/proposals/203
+- Proposal Link: https://testnet.joystream.org/#/proposals/205
 - Proposal Type: Text
 	- Amount: N/A
 - Status: Passed to next council
-	- Time to finalize: N/A
+	- Time to finalize: 8728 blocks (14,55h)
 - Created by: @maxlevush
 - Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
 
 #### Proposal 206 - Replenish my "give account"
 - Proposal Link: https://testnet.joystream.org/#/proposals/206
-- Proposal Type: Text
-	- Amount: N/A
-- Status: Passed to next council
-	- Time to finalize: N/A
+- Proposal Type: Spending
+	- Amount: 3000000
+- Status: Approved & Executed
+	- Time to finalize: 2005 blocks (3,34h)
 - Created by: @tomato
-- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @l1dev, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
 
 ### 2.4 - Select threads & events
 N/A
