@@ -212,6 +212,114 @@ Failed Proposals
 - Created by: @tomato
 - Participants: @tomato, @nexusfallout, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
 
+#### Proposal 217 - Change Curator Lead rewards
+- Proposal Link: https://testnet.joystream.org/#/proposals/217
+- Proposal Type: SetWorkingGroupLeaderReward
+	- Amount: From 63700 to 58530
+- Status: Approved & Executed
+	- Time to finalize: 7858 blocks (13,10h)
+- Created by: @maxlevush
+- Participants: @tomato, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @leet_joy, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 218 - Reward for Bounty #10
+- Proposal Link: https://testnet.joystream.org/#/proposals/218
+- Proposal Type: Spending
+	- Amount: 15906015
+- Status: Approved & Executed
+	- Time to finalize: 5556 blocks (9,26h)
+- Created by: @igrex
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @oiclid, @xandrell, @leet_joy, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 219 - Merge access to be granted to WG Leads
+- Proposal Link: https://testnet.joystream.org/#/proposals/219
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 9247 blocks (15,41h)
+- Created by: @isonar
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 220 - Merge Discord Video Bot PR
+- Proposal Link: https://testnet.joystream.org/#/proposals/220
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 26076 blocks (43,46h)
+- Created by: @isonar
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @blackmass, @fierydev, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
+
+#### Proposal 221 - Content Curator Lead Report (Statistics)
+- Proposal Link: https://testnet.joystream.org/#/proposals/221
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 12623 blocks (21,04h)
+- Created by: @igrex
+- Participants: @tomato, @nexusfallout, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 222 - Refill Storage Mint
+- Proposal Link: https://testnet.joystream.org/#/proposals/222
+- Proposal Type: SetWorkingGroupMintCapacity
+	- Amount: 5000000
+- Status: Approved & Executed
+	- Time to finalize: 10408 blocks (17,35h)
+- Created by: @nexusfallout
+- Participants: @tomato, @nexusfallout, @blackmass, @fierydev, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 223 - Curator Lead - Tasks + Reporting Require
+- Proposal Link: https://testnet.joystream.org/#/proposals/223
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 9862 blocks (16,44h)
+- Created by: @maxlevush
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 224 - Fill Working Group Mint Capacity
+- Proposal Link: https://testnet.joystream.org/#/proposals/224
+- Proposal Type: SetWorkingGroupMintCapacity
+	- Amount: 5000000
+- Status: Approved & Executed
+	- Time to finalize: 8870 blocks (14,78h)
+- Created by: @igrex
+- Participants: @tomato, @freakstatic_council, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 225 - Weekly Curator Working Group Report
+- Proposal Link: https://testnet.joystream.org/#/proposals/225
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 8993 blocks (14,99h)
+- Created by: @igrex
+- Participants: @tomato, @freakstatic_council, @blackmass, @fierydev, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 226 - Reduce reward Kryptos (Bounty 10)
+- Proposal Link: https://testnet.joystream.org/#/proposals/226
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 5188 blocks (8,65h)
+- Created by: @igrex
+- Participants: @tomato, @supunssw, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @nkhlghbl, @maxlevush
+
+#### Proposal 227 - DRAFT Content Curator WG OKRs
+- Proposal Link: https://testnet.joystream.org/#/proposals/227
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 5188 blocks (8,65h)
+- Created by: @maxlevush
+- Participants: @tomato, @supunssw, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @nkhlghbl, @maxlevush
+
+#### Proposal 228 - Content Curator WG OKRs (SP10)
+- Proposal Link: https://testnet.joystream.org/#/proposals/228
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 5188 blocks (8,65h)
+- Created by: @igrex
+- Participants: @tomato, @supunssw, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @nkhlghbl, @maxlevush
+
 ### 2.4 - Select threads & events
 N/A
 
