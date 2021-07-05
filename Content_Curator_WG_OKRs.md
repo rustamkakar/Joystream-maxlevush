@@ -22,13 +22,13 @@
 
  - no more than `24 hours` for a response addressed to the current Сurator Lead
 
-Promote participation in the bounty (controlled by Content Curator WG) to community members
+1.5 Promote participation in the bounty (controlled by Content Curator WG) to community members
 
- - at least two mentions in Discord channel (and/or Telegram) per council term
+ - at least two mentions in Discord channel (and/or Telegram) per reporting period
 
-Manadge bounty controlled by Content Curator WG
+1.6 Manage bounty controlled by Content Curator WG
 
- - All bounty have Bounty Manadger
+ - All bounty have Bounty Manager
 
  - All bounty reviewed and graded at least once per week
 
@@ -66,11 +66,11 @@ Curator Lead can grade Content Curators work
 
 Curator Lead must provide his OKRs via reply [on thread](https://testnet.joystream.org/#/forum/threads/478)
 
-Content Curators must provide his OKRs via reply [on thread](https://testnet.joystream.org/#/forum/threads/478)
+Content Curators must provide their OKRs via reply [on thread](https://testnet.joystream.org/#/forum/threads/478)
 
 ## 5. Duration of the OKRs reporting period
 
-Reporting period is `1 week` (Monday-Sunday). When the period is over - you have `24 hours` for submit your OKRs work. Reportind day is `Monday`
+Reporting period is `1 week` (Monday-Sunday). When the period is over - you have `24 hours` for submit your OKRs work. Reportind day for last period is `Monday`
 
 
 
