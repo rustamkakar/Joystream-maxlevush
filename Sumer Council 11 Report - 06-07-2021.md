@@ -122,6 +122,96 @@ Failed Proposals
 - Created by: @tomato
 - Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @l1dev, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
 
+#### Proposal 207 - KPI 11.3 - Deputy Council Secretary
+- Proposal Link: https://testnet.joystream.org/#/proposals/207
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 2449 blocks (4,08h)
+- Created by: @maxlevush
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
+
+#### Proposal 208 - Sumer - KPI 11.2 - Council Secretary
+- Proposal Link: https://testnet.joystream.org/#/proposals/208
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 2685 blocks (4,48h)
+- Created by: @tomato
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @l1dev, @oiclid, @xfactorus, @xandrell, @andybut, @maxlevush
+
+#### Proposal 209 - Refill operations mint
+- Proposal Link: https://testnet.joystream.org/#/proposals/209
+- Proposal Type: SetWorkingGroupMintCapacity
+	- Amount: 5000000
+- Status: Approved & Executed
+	- Time to finalize: 1645 blocks (2,74h)
+- Created by: @l1dev
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @maxlevush
+
+#### Proposal 210 - Content Curator Lead Report (Statistics)
+- Proposal Link: https://testnet.joystream.org/#/proposals/210
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 7044 blocks (11,74h)
+- Created by: @igrex
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @blackmass, @xandrell, @leet_joy, @igrex, @andybut, @nkhlghbl, @maxlevush
+
+#### Proposal 211 - Antioch KPI 10.4 - Tokenomics Repo
+- Proposal Link: https://testnet.joystream.org/#/proposals/211
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 7235 blocks (12,06h)
+- Created by: @freakstatic_council
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @blackmass, @xfactorus, @xandrell, @leet_joy, @igrex, @andybut, @maxlevush
+
+#### Proposal 212 - Fill Working Group Mint Capacity
+- Proposal Link: https://testnet.joystream.org/#/proposals/212
+- Proposal Type: SetWorkingGroupMintCapacity
+	- Amount: 5000000
+- Status: Approved & Executed
+	- Time to finalize: 4045 blocks (6,74h)
+- Created by: @igrex
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @leet_joy, @igrex, @andybut, @maxlevush
+
+#### Proposal 213 - Show what you are paid for
+- Proposal Link: https://testnet.joystream.org/#/proposals/213
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 3623 blocks (6,04h)
+- Created by: @oiclid
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @oiclid, @xfactorus, @leet_joy, @igrex, @doppelganger23, @maxlevush
+
+#### Proposal 214 - Fill Storage WG Mint
+- Proposal Link: https://testnet.joystream.org/#/proposals/214
+- Proposal Type: SetWorkingGroupMintCapacity
+	- Amount: 5000000
+- Status: Approved & Executed
+	- Time to finalize: 4464 blocks (7,44h)
+- Created by: @nexusfallout
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @blackmass, @xfactorus, @leet_joy, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 215 - Joining polkadot.subscan.io
+- Proposal Link: https://testnet.joystream.org/#/proposals/215
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 3237 blocks (5,40h)
+- Created by: @andybut
+- Participants: @tomato, @nexusfallout, @freakstatic_council, @fierydev, @xfactorus, @xandrell, @leet_joy, @igrex, @andybut, @doppelganger23, @maxlevush
+
+#### Proposal 216 - KPI 10.4 - Council Minutes
+- Proposal Link: https://testnet.joystream.org/#/proposals/216
+- Proposal Type: Text
+	- Amount: N/A
+- Status: Approved & Executed
+	- Time to finalize: 4951 blocks (8,25h)
+- Created by: @tomato
+- Participants: @tomato, @nexusfallout, @fierydev, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @doppelganger23, @maxlevush
+
 ### 2.4 - Select threads & events
 N/A
 
