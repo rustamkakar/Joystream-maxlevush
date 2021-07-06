@@ -88,8 +88,8 @@ Proposal States
 Failed Proposals
 - All proposals was approved
 
-- Total time for proposals to finalize: 211.8 hours
-- Average time for proposals to finalize: 10.59 hours
+- Total time for proposals to finalize: 246.79 hours
+- Average time for proposals to finalize: 12.98 hours
 	- This average is calculated from all proposals, including expired proposals but excluding canceled proposals.
 
 ### 2.2 - Proposal Breakdown
