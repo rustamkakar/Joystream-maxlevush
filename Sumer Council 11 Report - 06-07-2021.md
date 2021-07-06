@@ -306,19 +306,19 @@ Failed Proposals
 - Proposal Link: https://testnet.joystream.org/#/proposals/227
 - Proposal Type: Text
 	- Amount: N/A
-- Status: Approved & Executed
-	- Time to finalize: 5188 blocks (8,65h)
+- Status: Passed to next council
+	- Time to finalize: N/A
 - Created by: @maxlevush
-- Participants: @tomato, @supunssw, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @nkhlghbl, @maxlevush
+- Participants: 
 
 #### Proposal 228 - Content Curator WG OKRs (SP10)
 - Proposal Link: https://testnet.joystream.org/#/proposals/228
 - Proposal Type: Text
 	- Amount: N/A
-- Status: Approved & Executed
-	- Time to finalize: 5188 blocks (8,65h)
+- Status: Passed to next council
+	- Time to finalize: N/A
 - Created by: @igrex
-- Participants: @tomato, @supunssw, @freakstatic_council, @oiclid, @xfactorus, @xandrell, @igrex, @andybut, @nkhlghbl, @maxlevush
+- Participants: 
 
 ### 2.4 - Select threads & events
 N/A
