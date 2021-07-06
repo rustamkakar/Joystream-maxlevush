@@ -51,9 +51,9 @@ This report was compiled by @maxlevush with assistance from @freakstatic and @to
   * @maxlevush
 
 ### 1.5 - Council Mint & Budget Status
-* Start minted: 219119445 tokens
-* End minted: 253463583 tokens
-* Total minted during council round: 34344138 tokens (+15.67% from start)
+* Start minted: 872545399 tokens
+* End minted: 919445335 tokens
+* Total minted during council round: 46899936 tokens (+5.38% from start)
 
 * Budget proposal link: 
 * Budget forum link: 
