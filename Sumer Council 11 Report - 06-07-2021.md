@@ -23,22 +23,22 @@ This report was compiled by @maxlevush with assistance from @freakstatic and @to
 
 | Username             | Member ID | Prop. Votes Cast | CM Own Stake | CM Voter Stake |
 |----------------------|-----------|------------------|--------------|----------------|
-| @blackmass           | 361       |       17         | 7000000      | 0              |
-| @xfactorus           | 635       |       17         | 200000       | 6000000        |
-| @xandrell            | 867       |       19         | 1000         | 10200000       |
-| @nkhlghbl            | 1962      |       9          | 5000000      | 5000000        |
-| @supunssw            | 318       |       2          | 6000000      | 0              |
-| @doppelganger23      | 2039      |       14         | 5000000      | 3000000        |
-| @freakstatic_council | 321       |       16         | 6000000      | 3000000        |
-| @leet_joy            | 957       |       2          | 6000000      | 0              |
-| @fierydev            | 439       |       12         | 8888888      | 3000000        |
-| @nexusfallout        | 4         |       17         | 7000000      | 3000000        |
-| @tomato              | 2         |       18         | 5000000      | 3038000        |
-| @2themoon            | 1989      |       6          | 2000000      | 3000000        |
-| @maxlevush           | 2130      |       20         | 1000         | 7000000        |
-| @igrex               | 1048      |       19         | 3000000      | 3000000        |
-| @oiclid              | 525       |       0          | 63000        | 6250000        |
-| @andybut             | 1316      |       11         | 43210        | 6570000        |
+| @blackmass           | 361       |       6          | 7000000      | 0              |
+| @xfactorus           | 635       |       21         | 200000       | 6000000        |
+| @xandrell            | 867       |       21         | 1000         | 10200000       |
+| @nkhlghbl            | 1962      |       2          | 5000000      | 5000000        |
+| @supunssw            | 318       |       1          | 6000000      | 0              |
+| @doppelganger23      | 2039      |       12         | 5000000      | 3000000        |
+| @freakstatic_council | 321       |       19         | 6000000      | 3000000        |
+| @leet_joy            | 957       |       8          | 6000000      | 0              |
+| @fierydev            | 439       |       15         | 8888888      | 3000000        |
+| @nexusfallout        | 4         |       19         | 7000000      | 3000000        |
+| @tomato              | 2         |       23         | 5000000      | 3038000        |
+| @2themoon            | 1989      |       0          | 2000000      | 3000000        |
+| @maxlevush           | 2130      |       23         | 1000         | 7000000        |
+| @igrex               | 1048      |       22         | 3000000      | 3000000        |
+| @oiclid              | 525       |       14         | 63000        | 6250000        |
+| @andybut             | 1316      |       22         | 43210        | 6570000        |
 |                      |           |                  |              |                |
 |                      |           | Subtotal:        | 61197098     | 62058000       |
 |                      |           | Total:           |              | 123255098      |
@@ -63,8 +63,8 @@ This report was compiled by @maxlevush with assistance from @freakstatic and @to
 ## 2 - Minutes
 ### 2.1 - Proposal Overview
 Proposal Types
-- 23 Proposals Created
-	- 15 Text Proposals
+- 25 Proposals Created
+	- 17 Text Proposals
 	- 2 Spending Proposals
 	- 1 SetWorkingGroupLeaderReward Proposals
 	- 5 SetWorkingGroupMintCapacity Proposals
@@ -77,7 +77,7 @@ Proposal Types
 	- 0 RuntimeUpgrade
 
 Proposal States
-- 21 Approved & executed proposals
+- 23 Approved & executed proposals
 - 0 Canceled proposals
 - 0 Rejected proposals
 - 0 Slashed proposals
