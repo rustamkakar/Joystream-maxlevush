@@ -63,11 +63,11 @@ This report was compiled by @maxlevush with assistance from @freakstatic and @to
 ## 2 - Minutes
 ### 2.1 - Proposal Overview
 Proposal Types
-- 24 Proposals Created
+- 23 Proposals Created
 	- 15 Text Proposals
-	- 3 Spending Proposals
-	- 3 SetWorkingGroupLeaderReward Proposals
-	- 3 SetWorkingGroupMintCapacity Proposals
+	- 2 Spending Proposals
+	- 1 SetWorkingGroupLeaderReward Proposals
+	- 5 SetWorkingGroupMintCapacity Proposals
 	- 0 BeginReviewWorkingGroupLeaderApplication Proposals
 	- 0 TerminateWorkingGroupLeaderRole
 	- 0 FillWorkingGroupLeaderOpening
@@ -77,8 +77,8 @@ Proposal Types
 	- 0 RuntimeUpgrade
 
 Proposal States
-- 19 Approved & executed proposals
-- 2 Canceled proposals
+- 21 Approved & executed proposals
+- 0 Canceled proposals
 - 0 Rejected proposals
 - 0 Slashed proposals
 - 0 Expired proposals
@@ -86,8 +86,7 @@ Proposal States
 	- These proposals didn't gather enough quorum in the current council term, so the votes are reset and passed to the next council.
 
 Failed Proposals
-- 1 NotEnoughCapacity failures
-- 1 ExecutionFailed
+- All proposals was approved
 
 - Total time for proposals to finalize: 211.8 hours
 - Average time for proposals to finalize: 10.59 hours
