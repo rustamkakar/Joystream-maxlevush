@@ -34,7 +34,7 @@
 
 1.4 Response time to questions asked in Discord channel `#storage-provider`
 
- - no more than `24 hours` for a response addressed to the current Сurator Lead
+ - no more than `24 hours` for a response addressed to the current Storage Lead
 
 
 ## 2. Storage Providers OKRs
