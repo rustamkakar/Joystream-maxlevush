@@ -30,7 +30,7 @@ videoId, slideId, timestamp_start:
 ### 12, 1.001, 00:00
 ![Joystream_Community_Update_1 001](https://user-images.githubusercontent.com/83000549/120277816-1de96100-c2e7-11eb-8c2c-a51cffe57408.jpeg)
 
-**Summary:** This is the first installment of the Joystream community update video series in an effort to share more effectively what it is we are working on, what is coming down the pipe, what’s happening in the community, to bring everyone up to speed on where we are going and the road to mainnet basically.
+**Summary:** Это первая часть серии видео обновлений сообщества Joystream, цель которой - более эффективно о том, над чем мы работаем, о новостях, о том что происходит в сообществе. Для того чтобы все оставались в курсе, куда мы направляемся, и о пути к мейннету.
 
 ### 12, 1.002, 00:25
 ![Joystream_Community_Update_1 002](https://user-images.githubusercontent.com/83000549/120278668-25f5d080-c2e8-11eb-8b65-3f7095e7be97.jpeg)
